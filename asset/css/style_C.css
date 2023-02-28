@@ -69,8 +69,8 @@ header .menu #btn_menu {
   align-items: center;
 }
 .card {
-  width: 800px;
-  height: 500px;
+  width: 710px;
+  height: 400px;
   display: flex;
   overflow: hidden;
   background: rgba(6, 9, 13, 0.536);
@@ -101,14 +101,14 @@ header .menu #btn_menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px 15px;
+  padding: 10px 5px;
 }
 
 .card .content .formulario {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  margin: 25px auto;
+  width: 80%;
+  margin: 15px auto;
   justify-content: space-between;
 }
 
@@ -118,7 +118,7 @@ header .menu #btn_menu {
   border: 2px solid #49a3d6;
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 16px;
   color: #a4a4a4;
 }
 
@@ -150,14 +150,23 @@ header .menu #btn_menu {
   color: #fff;
   border: none;
   border-radius: 3px;
-  padding: 15px 40px;
+  padding: 10px 30px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .card .content .formulario .boton:hover {
   background: #387bea;
 }
-
+.card .content .titulo {
+  font-size: 44px;
+  font-family:'Cooper Black', Arial, Helvetica, sans-serif;
+  line-height: 34px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+}
 /* ----- ----- FOOTER ----- ----- */
 .pie-pagina {
   width: 100%;
@@ -175,22 +184,6 @@ header .menu #btn_menu {
 }
 
 /* ----- ----- MEDIA QUERIES ----- ----- */
-@media screen and (max-width: 800px) {
-  header .menu {
-    text-align: center;
-  }
-
-  .main .trabajos .contenedor-trabajos .trabajo {
-    width: 46%;
-  }
-  .pie-pagina .grupo-1 {
-    width: 90%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 30px;
-    padding: 35px 0px;
-  }
-}
-
 @media screen and (max-width: 720px) {
   header .menu nav {
     position: fixed;
@@ -256,19 +249,16 @@ header .menu #btn_menu {
   header .menu #btn_menu:hover {
     background: rgba(255, 255, 255, 0.2);
   }
+  .card {
+    width: 400px;
+    height: 400px;
+  }
+  .card .img-card {
+    width: 0%;
+  }
+  .card .content {
+    width: 100%;
+  }
+  
 }
 
-@media screen and (max-width: 500px) {
-  header .contenedor-texto .texto .nombre {
-    font-size: 35px;
-  }
-
-  header .contenedor-texto .texto .profesion {
-    font-size: 18px;
-  }
-
-  .card .content .redes-sociales .contenedor {
-    flex-wrap: wrap;
-    padding: 20px 0;
-  }
-}
