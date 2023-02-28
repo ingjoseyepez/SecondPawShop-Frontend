@@ -1,0 +1,442 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 16px;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* ----- ----- HEADER ----- ----- */
+header {
+  background: url("../img/bg_1.jpg") #49a3d6;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
+
+header .menu{
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+}
+
+header .menu ul{
+  display: flex;
+}
+
+header .menu ul li{
+  list-style: none;
+  margin-left: 36px;
+}
+
+header .menu ul li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight:bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header .menu ul li a:hover{
+  background: #F6615D;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+header .menu #btn_menu{
+  display: none;
+}
+header .menu #btn_menu{
+  display: none;
+}
+
+header .contenedor-texto {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10px;
+}
+
+header .contenedor-texto .texto {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 60px;
+}
+
+header .contenedor-texto .texto h1,
+header .contenedor-texto .texto h2 {
+  font-family:'Cooper Black', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+header .contenedor-texto .texto .nombre {
+  margin-bottom: 10px;
+  color: #1b67c3;
+  text-shadow: #f5f5f5 2px 2px 0px, #9C9C9C 4px 4px 0px;
+  font-size: 120px;
+  line-height: 70px;
+}
+header .contenedor-texto .texto .profesion {
+  margin-bottom: 10px;
+  color: #67d5e7;
+  text-shadow: #f5f5f5 2px 2px 0px, #9C9C9C 4px 4px 0px;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+/* ----- ----- MAIN ----- ----- */
+.main .acerca-de {
+  padding: 1px 0;
+  margin: 0 0 40px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main .acerca-de .t_img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main .acerca-de .t_img img{
+  background-size: cover;
+  width: 500px;
+  height: 120px;
+}
+.main .acerca-de .container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+}
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0,0,0,.4);
+  text-align: center;
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(3, 35, 54);
+  padding: 10px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .back .link a {
+  color: #fff;
+	text-align: center;
+	width: 100px;
+	font-size: 40px;
+  margin: 10px;
+}
+
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  font-size: 20px;
+  letter-spacing: 1px;
+} 
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+/* ----- ----- proyecto ----- ----- */
+
+.main .trabajos {
+  background: url("../img/fondo.jpg") #49a3d6;
+  background-size: cover;
+  object-fit: cover;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main .trabajo .t_img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main .trabajo .t_img img{
+  background-size: cover;
+  width: 500px;
+  height: 90px;
+}
+.main .trabajos .container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.main .trabajos .container .card{
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.main .trabajos .container .card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.main .trabajos .container .card img{
+  background-size: cover;
+  width: 330px;
+  height: 220px;
+}
+
+
+.main .trabajos .container .card p{
+  padding:1rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main .trabajos .container .card a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #3498db;
+}
+
+
+/* ----- ----- FOOTER ----- ----- */
+.pie-pagina{
+  width: 100%;
+  background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:50px;
+  padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+  width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+  color: aqua;
+}
+.pie-pagina .grupo-2{
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+
+
+/* ----- ----- MEDIA QUERIES ----- ----- */
+@media screen and (max-width: 800px) {
+  header .menu {
+    text-align: center;
+  }
+
+  .main .trabajos .contenedor-trabajos .trabajo {
+    width: 46%;
+  } 
+  .pie-pagina .grupo-1{
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap:30px;
+      padding: 35px 0px;
+  }
+}
+
+@media screen and (max-width: 720px)
+{
+
+    header .menu nav{
+        position: fixed;
+        top: 0;
+        right: -250px;
+        background: #892000cc;
+        width: 250px;
+        height: 100vh;
+        padding: 40px;
+        z-index: 1;
+        transition: all 1000ms;
+    }
+
+    header .menu ul{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    header .menu ul li{
+        margin-top: 30px;
+        margin-left: -30px;
+    }
+
+    header  .menu ul li a{
+        color: #bebebe;
+    }
+
+    #selected{
+        background: none;
+        padding: 0px;
+        border-radius: none;
+        color: #F6615D;
+    }
+
+    .menu nav img{
+        display: block;
+        width: 60px;
+    }
+
+    #back_menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        display: none;
+    }
+
+    header .menu #btn_menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background:#fff;
+        font-size: 24px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+
+    header .menu #btn_menu:hover{
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+@media screen and (max-width: 500px) {
+  header .contenedor-texto .texto .nombre {
+    font-size: 35px;
+  }
+
+  header .contenedor-texto .texto .profesion {
+    font-size: 18px;
+  }
+
+  footer .redes-sociales .contenedor {
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+}
