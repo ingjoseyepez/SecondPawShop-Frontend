@@ -1,0 +1,136 @@
+
+
+*::after,*::before,*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-y:visible;
+}
+
+
+.icon-cart{
+    width: 40px;
+    height: 40px;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+}
+
+main{
+    width: 100%;
+    padding: 10px;
+   
+}
+
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 10px;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+}
+
+
+.item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product button{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: bisque;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.products-preview{
+    position:fixed;
+    top: 0; left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    /*background: rgba(0,0,0,0.8);*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-preview .preview{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 20rem;
+}
+
+.products-preview .preview.active{
+    display: none;
+}
+
+.products-preview .preview img{
+    height: 10rem;
+}
+.products-preview .preview .fa-times{
+    position:absolute;
+    top:.5rem; right: .5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 1.5rem;
+}
+.products-preview .preview .fa-times:hover{
+    transform: rotate(180deg);
+}
+
+.products-preview h3{
+    color: #444;
+    padding: 5rem 0;
+    font-size: 2.5rem;
+}
