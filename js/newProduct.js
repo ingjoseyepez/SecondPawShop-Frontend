@@ -9,6 +9,7 @@ class Articulo {
   }
   
   const formulario = document.querySelector('form');
+
   formulario.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevenir que el formulario se envíe automáticamente
   
@@ -19,5 +20,7 @@ class Articulo {
     const imagenes = formulario.elements['imagenes'].files;
   
     const articulo = new Articulo(nombre, categoria, descripcion, cantidad, imagenes);
-    console.log(articulo);
+    localStorage.setItem('newProduct', JSON.stringify(articulo));
+    console.log(localStorage.getItem('newProduct'));
   });
+
