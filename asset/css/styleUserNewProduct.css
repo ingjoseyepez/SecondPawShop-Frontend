@@ -272,6 +272,111 @@ header .menu #btn_menu {
     justify-content: center;
 }
 
+
+.card {
+width: 500px;
+height: 600px;
+display: flex;
+overflow: hidden;
+background: rgba(0, 0, 0, 0.615);
+border-radius: 10px;
+transition: 0.1s;
+margin-bottom: 20px;
+}
+
+.card:hover {
+transform: scale(1.02);
+}
+
+.card .content {
+width: 80%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+margin: 0 auto;
+}
+
+.card .content .formulario {
+display: flex;
+flex-wrap: wrap;
+width: 80%;
+justify-content: flex-start;
+align-items: flex-start;
+margin: 0 auto;
+}
+.card .content .formulario label{
+width: 100%;
+color: #fff;
+}
+
+.card .content .formulario input[type="text"],
+.card .content .formulario input[type="number"],
+.card .content .formulario textarea {
+border: 2px solid #49a3d6;
+border-radius: 5px;
+padding: 10px 20px;
+font-size: 16px;
+color: #a4a4a4;
+}
+
+.card .content .formulario input[type="text"]:focus,
+.card .content .formulario input[type="number"]:focus,
+.card .content .formulario textarea:focus {
+border: 2px solid #3895ea;
+}
+
+.card .content .formulario input[type="text"],
+.card .content .formulario input[type="number"],
+.card .content .formulario input[type="file"]{
+width: 100%;
+margin-bottom: 5px;
+}
+.card .content .formulario .cat{
+width: 100%;
+margin-bottom: 5px;
+border: 2px solid #49a3d6;
+border-radius: 5px;
+padding: 10px 20px;
+font-size: 16px;
+color: #a4a4a4;
+}
+
+.card .content .formulario textarea {
+width: 100%;
+height: 100px;
+min-width: 100%;
+max-width: 100%;
+min-height: 100px;
+max-height: 300px;
+margin-bottom: 5px;
+}
+
+.card .content .formulario .boton {
+margin: auto;
+background: #3895ea;
+color: #fff;
+border: none;
+border-radius: 3px;
+padding: 10px 30px;
+cursor: pointer;
+margin: 10px auto;
+}
+
+.card .content .formulario .boton:hover {
+background: #387bea;
+}
+.card .content .titulo {
+font-size: 34px;
+font-family:'Cooper Black', Arial, Helvetica, sans-serif;
+line-height: 34px;
+font-weight: 300;
+color: #ffffff;
+text-align: center;
+margin: 15px 0;
+}
+
 /* ----- ----- FOOTER ----- ----- */
 .pie-pagina {
   width: 100%;
