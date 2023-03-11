@@ -267,9 +267,9 @@ header .menu #btn_menu {
     justify-content: center;
 }
 
-.admin-newProduct {
+.admin-contact {
     display: flex;
-    
+    background-color: blue;
 }
 
 
