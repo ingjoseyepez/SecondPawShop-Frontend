@@ -1,9 +1,10 @@
 class Articulo {
-    constructor(nombre, categoria, descripcion, cantidad, imagenes) {
+    constructor(nombre, categoria, descripcion, cantidad, precio, imagenes) {
       this.nombre = nombre;
       this.categoria = categoria;
       this.descripcion = descripcion;
       this.cantidad = cantidad;
+      this.precio = precio;
       this.imagenes = imagenes;
     }
   }
@@ -26,9 +27,10 @@ if (document.querySelector('body').id === 'bodyUser-NewProduct'){
       const categoria = formulario.elements['categoria'].value;
       const descripcion = formulario.elements['descripcion-producto'].value;
       const cantidad = formulario.elements['cantidad'].value;
+      const precio = formulario.elements['precio'].value;
       const imagenes = formulario.elements['imagenes'].value;
     
-      const articulo = new Articulo(nombre, categoria, descripcion, cantidad, imagenes);
+      const articulo = new Articulo(nombre, categoria, descripcion, cantidad,precio, imagenes);
       console.log(articulo);
       console.log(typeof articulo +"   "+ typeof(newProducts));
       console.log(newProducts);
@@ -103,6 +105,12 @@ if (document.querySelector('body').id === 'bodyUser-NewProduct'){
       quantity.classList.add('card__quantity');
       quantity.innerHTML = `<strong>Cantidad:</strong> ${articulo.cantidad}`;
       cardInfo.appendChild(quantity);
+
+      const precio = document.createElement('p');
+      precio.classList.add('card__quantity');
+      precio.innerHTML = `<strong>Precio:</strong> ${articulo.precio}`;
+      cardInfo.appendChild(precio);
+    
     
       // Creamos un elemento div con la clase "card__buttons" que contendrá los botones de aceptar y rechazar
       const cardButtons = document.createElement('div');
