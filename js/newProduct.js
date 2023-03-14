@@ -10,8 +10,10 @@ class Articulo {
 
 
 if (document.querySelector('body').id === 'bodyUser-NewProduct'){
+    console.log(JSON.parse(localStorage.getItem('newProducts')));
     console.log("Hola estoy en la pag user de new product");
-    let newProducts = [];
+    
+    //let newProducts = [];
     newProducts  = localStorage.getItem('newProducts');
     newProducts = JSON.parse(newProducts);
 
@@ -50,7 +52,7 @@ if (document.querySelector('body').id === 'bodyUser-NewProduct'){
 }else if (document.querySelector('body').id === 'bodyAdmin-NewProduct'){
     console.log("Hola estoy en adm new producto");
     console.log(JSON.parse(localStorage.getItem('newProducts')));
-    let newProducts = [];
+    //let newProducts = [];
     newProducts  = localStorage.getItem('newProducts');
     newProducts = JSON.parse(newProducts);
 
