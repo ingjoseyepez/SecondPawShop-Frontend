@@ -1,3 +1,4 @@
+//Clase para los articulos del sistema.
 class Articulo {
     constructor(nombre, categoria, descripcion, cantidad, precio, imagenes) {
       this.nombre = nombre;
@@ -8,59 +9,87 @@ class Articulo {
       this.imagenes = imagenes;
     }
   }
+//Funciones generales para la creación de nuevos prodcutos
+function getNewProducts (){
 
+  let newProducts = JSON.parse(localStorage.getItem('newProducts'));
+  let newsProducts = [];
+  if (newProducts != null){
+    for (i = 0; i < newProducts.length;i++){
+      newsProducts.push(JSON.parse(newProducts[i]))
+    }
+  }
+  
+  return newsProducts;
+}
+
+function setNewProducts(newsProducts){
+
+  let newProducts = [];
+
+  for(i = 0; i < newsProducts.length; i++){
+    newProducts.push(JSON.stringify(newsProducts[i]));
+  }
+  
+  localStorage.setItem('newProducts', JSON.stringify(newProducts));
+
+}
 
 if (document.querySelector('body').id === 'bodyUser-NewProduct'){
-    console.log(JSON.parse(localStorage.getItem('newProducts')));
-    console.log("Hola estoy en la pag user de new product");
-    
-    //let newProducts = [];
-    newProducts  = localStorage.getItem('newProducts');
-    newProducts = JSON.parse(newProducts);
+  //Banderas
+  console.log("Hola estoy en la pag user de new product");
+  console.log(getNewProducts());
 
-    const formulario = document.querySelector('form');
+  //Declaracion de variables utilizadas para la pag
+  let newProducts  = getNewProducts();
+  const formulario = document.querySelector('form');
 
-    formulario.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevenir que el formulario se envíe automáticamente
-    
-      const nombre = formulario.elements['nombre-articulo'].value;
-      const categoria = formulario.elements['categoria'].value;
-      const descripcion = formulario.elements['descripcion-producto'].value;
-      const cantidad = formulario.elements['cantidad'].value;
-      const precio = formulario.elements['precio'].value;
-      const imagenes = formulario.elements['imagenes'].value;
-    
-      const articulo = new Articulo(nombre, categoria, descripcion, cantidad,precio, imagenes);
-      console.log(articulo);
-      console.log(typeof articulo +"   "+ typeof(newProducts));
-      console.log(newProducts);
-
-      if (newProducts == null){
-
-        newProducts = [JSON.stringify(articulo)];
-
-      }else{
-        newProducts.push(JSON.stringify(articulo));
-      }
-
-      localStorage.setItem('newProducts', JSON.stringify(newProducts));
-
-      console.log(JSON.parse(localStorage.getItem('newProducts')));
-
-    });
+  formulario.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevenir que el formulario se envíe automáticamente
+    takesDatesFromForm();
+  });
 
 
+  //Función propias para la pag de User-NewProduct;
+  function resetForm(){
+    formulario.elements['nombre-articulo'].value = "";
+    formulario.elements['categoria'].value = "";
+    formulario.elements['descripcion-producto'].value ="";
+    formulario.elements['cantidad'].value = "";
+    formulario.elements['precio'].value ="";
+    formulario.elements['imagenes'].value= "";
+  }
+
+  function takesDatesFromForm (){
+    const nombre = formulario.elements['nombre-articulo'].value;
+    const categoria = formulario.elements['categoria'].value;
+    const descripcion = formulario.elements['descripcion-producto'].value;
+    const cantidad = formulario.elements['cantidad'].value;
+    const precio = formulario.elements['precio'].value;
+    const imagenes = formulario.elements['imagenes'].value;
+  
+    const articulo = new Articulo(nombre, categoria, descripcion, cantidad,precio, imagenes);
+
+    if (newProducts == null){
+      newProducts = [articulo];
+    }else{
+      newProducts.push(articulo);
+    }
+
+    setNewProducts(newProducts);
+    resetForm();
+  }
 
 }else if (document.querySelector('body').id === 'bodyAdmin-NewProduct'){
+    //Bandera
     console.log("Hola estoy en adm new producto");
-    console.log(JSON.parse(localStorage.getItem('newProducts')));
-    //let newProducts = [];
-    newProducts  = localStorage.getItem('newProducts');
-    newProducts = JSON.parse(newProducts);
+    console.log(getNewProducts());
+
+    //Declaración de variables
+    let newProducts  = getNewProducts();
 
     for(i = 0; i < newProducts.length; i++){
-      console.log(typeof (JSON.parse(newProducts[i])));
-      agregarCartaDeArticulo(JSON.parse(newProducts[i]));
+      agregarCartaDeArticulo(newProducts[i]);
     }
 
     function agregarCartaDeArticulo(articulo) {
@@ -138,7 +167,6 @@ if (document.querySelector('body').id === 'bodyUser-NewProduct'){
       contenedorDeCartas.appendChild(card);
 
     }
-    
 
 }
   
