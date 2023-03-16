@@ -7,159 +7,184 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Tienda</title>
 	<link rel="stylesheet" href="/asset/css/styleProd.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600;700&display=swap"
+		rel="stylesheet">
 	<link
-	rel="stylesheet"
-	href="https://kit.fontawesome.com/9d0391a552.css"
-	crossorigin="anonymous"
-  />
-  <script
-	src="https://kit.fontawesome.com/9d0391a552.js"
-	crossorigin="anonymous"
-  ></script>
-  <link
-	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700"
-	rel="stylesheet"
-  />
-  <script src="/js/app.js" defer></script>
+		href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600;700&family=Shadows+Into+Light&display=swap"
+		rel="stylesheet">
+	<script src="https://kit.fontawesome.com/9d0391a552.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700" rel="stylesheet" />
+	<script src="/js/app.js" defer></script>
 </head>
 
 <body>
 	<header>
 		<div class="contenedor">
 			<div class="menu">
-			  <i class="fas fa-bars" id="btn_menu"></i>
-			  <div id="back_menu"></div>
-			  <nav id="nav">
-				<ul>
-				  <li><a href="#">Inicio</a></li>
-				  <li><a href="#">Productos</a></li>
-				  <li><a href="/Nosotros.html">Nosotros</a></li>
-				  <li><a href="/Contacto.html">Contactos</a></li>
-				  <li><a href="/Contacto.html">Login</a></li>
-				</ul>
-			  </nav>
+				<i class="fas fa-bars" id="btn_menu"></i>
+				<div id="back_menu"></div>
+				<nav id="nav">
+					<ul>
+						<li><a href="#">Inicio</a></li>
+						<li><a href="/Productos.html">Productos</a></li>
+						<li><a href="/Nosotros.html">Nosotros</a></li>
+						<li><a href="/Contacto.html">Contactos</a></li>
+						<li><a href="/Login.html">Login</a></li>
+					</ul>
+				</nav>
 			</div>
-			
-		<div class="container-icon">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-				stroke="currentColor" class="icon-cart">
-				<path stroke-linecap="round" stroke-linejoin="round"
-					d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-			</svg>
-			<div class="count-products">
-				<span id="contador-productos">0</span>
-			</div>
-			<div class="container-cart-products hidden-cart">
-				<div class="row-product">
-					<div class="cart-product hidden-cart">
-						<div class="info-cart-product">
-							<span class="cantidad-producto-carrito">1</span>
-							<p class="titulo-producto-carrito">Zapatos Nike</p>
-							<span class="precio-producto-carrito">$80</span>
+
+			<div class="container-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+					stroke="currentColor" class="icon-cart">
+					<path stroke-linecap="round" stroke-linejoin="round"
+						d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+				</svg>
+				<div class="count-products">
+					<span id="contador-productos">0</span>
+				</div>
+				<div class="container-cart-products hidden-cart">
+					<div class="row-product">
+						<div class="cart-product hidden-cart">
+							<div class="info-cart-product">
+								<span class="cantidad-producto-carrito">1</span>
+								<p class="titulo-producto-carrito">Zapatos Nike</p>
+								<span class="precio-producto-carrito">$80</span>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+								stroke="currentColor" class="icon-close">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+							</svg>
 						</div>
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-							stroke="currentColor" class="icon-close">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-						</svg>
+					</div>
+					<div class="cart-total ">
+						<h3>Total:</h3>
+						<span class="total-pagar">$200</span>
 					</div>
 				</div>
-				<div class="cart-total ">
-					<h3>Total:</h3>
-					<span class="total-pagar">$200</span>
-				</div>
 			</div>
-		</div>
 	</header>
-	
+
 	<section class="categories">
 		<div class="sub-categories">
-			<a class="item-categories" href=""><img  src="/asset/img/cat.jpg" alt="cat"></a>
-			<a class="item-categories" href=""><img  src="/asset/img/cat.jpg" alt="cat"></a>
-			<a class="item-categories" href=""><img  src="/asset/img/cat.jpg" alt="cat"></a>
-			<a class="item-categories" href=""><img  src="/asset/img/cat.jpg" alt="cat"></a>
+			<a class="item-categories" href=""><img src="/asset/img/cat.jpg" alt="cats"></a>
+			<a class="item-categories" href=""><img src="/asset/img/dog.jpg" alt="dogs"></a>
+			<a class="item-categories" href=""><img src="/asset/img/obj.jpg" alt="accessories"></a>
+			<a class="item-categories salud" href=""><img src="/asset/img/salud2.png" alt="salud"></a>
 		</div>
 	</section>
 
 	<div class="container-items">
 		<div class="item">
 			<figure>
-				<img src=""
-					alt="producto" />
+				<img src="/asset/img/imgproducts/cama.webp" alt="producto" />
 			</figure>
 			<div class="info-product">
-				<h2>Zapatos Nike</h2>
+				<h2>Cama ligth vibre</h2>
 				<p class="price">$80</p>
 				<button class="btn-add-cart">Añadir al carrito</button>
 			</div>
 		</div>
 		<div class="item">
 			<figure>
-				<img src=""
-					alt="producto" />
+				<img src="/asset/img/imgproducts/camisa-p.jpg" alt="producto" />
 			</figure>
 			<div class="info-product">
-				<h2>Audifonos</h2>
+				<h2>Camisa playera</h2>
 				<p class="price">$20</p>
 				<button class="btn-add-cart">Añadir al carrito</button>
 			</div>
 		</div>
 		<div class="item">
 			<figure>
-				<img src=""
-					alt="producto" />
+				<img src="/asset/img/imgproducts/saco.jpg" alt="producto" />
 			</figure>
 			<div class="info-product">
-				<h2>Reloj</h2>
+				<h2>Saco</h2>
 				<p class="price">$50</p>
 				<button class="btn-add-cart">Añadir al carrito</button>
 			</div>
 		</div>
 		<div class="item">
 			<figure>
-				<img src=""
-					alt="producto" />
+				<img src="/asset/img/imgproducts/impermeable.jpg" alt="producto" />
 			</figure>
 			<div class="info-product">
-				<h2>Smartwatch</h2>
+				<h2>Impermeable</h2>
 				<p class="price">$90</p>
 				<button class="btn-add-cart">Añadir al carrito</button>
 			</div>
 		</div>
 		<div class="item">
 			<figure>
-				<img src=""
-					alt="producto" />
+				<img src="/asset/img/imgproducts/gafas-gato.jpg" alt="producto" />
 			</figure>
 			<div class="info-product">
-				<h2>Perfume</h2>
+				<h2>Gafas Gato</h2>
 				<p class="price">$50</p>
 				<button class="btn-add-cart">Añadir al carrito</button>
 			</div>
 		</div>
 		<div class="item">
 			<figure>
-				<img src=""
-					alt="producto" />
+				<img src="/asset/img/imgproducts/jugueteperro.jpg" alt="producto" />
 			</figure>
 			<div class="info-product">
-				<h2>Perfume</h2>
+				<h2>juguete perro</h2>
 				<p class="price">$50</p>
 				<button class="btn-add-cart">Añadir al carrito</button>
 			</div>
 		</div>
 		<div class="item">
 			<figure>
-				<img src=""
-					alt="producto" />
+				<img src="/asset/img/imgproducts/pastilla-antipulgas.jpg" alt="producto" />
 			</figure>
 			<div class="info-product">
-				<h2>Perfume</h2>
+				<h2>Pastilla antipulgas</h2>
+				<p class="price">$50</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="/asset/img/imgproducts/chalecos.jpg" alt="producto" />
+			</figure>
+			<div class="info-product">
+				<h2>Chalecos hellstyle</h2>
+				<p class="price">$50</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="/asset/img/imgproducts/disfraz.jpg" alt="producto" />
+			</figure>
+			<div class="info-product">
+				<h2>Disfraz</h2>
+				<p class="price">$50</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="/asset/img/imgproducts/collar-cuero.jpg" alt="producto" />
+			</figure>
+			<div class="info-product">
+				<h2>Collar cuero</h2>
 				<p class="price">$50</p>
 				<button class="btn-add-cart">Añadir al carrito</button>
 			</div>
 		</div>
 	</div>
+	<footer class="pie-pagina">
 
+		<div class="grupo-2">
+			<small>&copy; 2023 <b>JSJ SOLUCTION</b> - Todos los Derechos
+				Reservados.</small>
+		</div>
+	</footer>
 	<script src="/js/script.js"></script>
 </body>
 

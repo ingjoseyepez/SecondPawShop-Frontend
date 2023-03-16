@@ -18,8 +18,8 @@ const countProducts = document.querySelector('#contador-productos');
 
 const productList = document.querySelector('.container-items');
 
-productList.addEventListener('click', e =>{
-    if(e.target.classList.contains('btn-add-cart')){
+productList.addEventListener('click', e => {
+    if (e.target.classList.contains('btn-add-cart')) {
         const product = e.target.parentElement;
 
         const infoProduct = {
@@ -29,26 +29,26 @@ productList.addEventListener('click', e =>{
         };
         //recorrre el arreglo
         const exist = allProducts.some(product => product.tittle === infoProduct.tittle);
-       //aca hacemos que no se repitran los productos
-        if(exist){
-            const products = allProducts.map(product=>{
-                if (product.tittle === infoProduct.tittle){
+        //aca hacemos que no se repitran los productos
+        if (exist) {
+            const products = allProducts.map(product => {
+                if (product.tittle === infoProduct.tittle) {
                     product.quantity++;
-                    return  product;
-                }else{
+                    return product;
+                } else {
                     return product;
                 }
             });
-            
+
             allProducts = [...products];
-        } else{
+        } else {
             allProducts = [...allProducts, infoProduct];
         }
         showHTML();
     }
 });
 //evento para limpiar carrito
-rowProduct.addEventListener('click' , (e)=>{
+rowProduct.addEventListener('click', (e) => {
     if (e.target.classList.contains('icon-close')) {
         const product = e.target.parentElement;
         const tittle = product.querySelector('p').textContent
@@ -62,21 +62,74 @@ rowProduct.addEventListener('click' , (e)=>{
 const showHTML = () => {
 
 
-    if(!allProducts.length){
-        containerCartProducts.innerHTML=`
+    if (!allProducts.length) {
+        containerCartProducts.innerHTML = `
         <p class="cart-empty">El carrito esta vacio :c</p>
         `
-	}
+    }
+
+    var p = [
+        {
+            nombre: "Camisa playera",
+            precio: "$20",
+            cantidad: 1
+        },
+        {
+            nombre: "camisa playa",
+            precio: "20",
+            cantidad: 1
+        },
+        {
+            nombre: "saco",
+            precio: "$50",
+            cantidad: 1
+        },
+        {
+            nombre: "impermeable",
+            precio: "$90",
+            cantidad: 1
+        },
+        {
+            nombre: "gafas gato",
+            precio: "$50",
+            cantidad: 1
+        },
+        {
+            nombre: "juguete perro",
+            precio: "$50",
+            cantidad: 1
+        },
+        {
+            nombre: "pastilla antipulgas",
+            precio: "$50",
+            cantidad: 1
+        },
+        {
+            nombre: "Chalecos Hellstyle",
+            precio: "$50",
+            cantidad: 1
+        },
+        {
+            nombre: "Disfraz",
+            precio: "$50",
+            cantidad: 1
+        },
+        {
+            nombre: "Collar cuero",
+            precio: "$50",
+            cantidad: 1
+        }
+    ]
 
 
     //limpiar html
 
-    rowProduct.innerHTML =" ";
+    rowProduct.innerHTML = " ";
 
     let total = 0;
     let totalOfProducts = 0;
 
-    allProducts.forEach(product=>{
+    allProducts.forEach(product => {
         const containerProduct = document.createElement('div');
         containerProduct.classList.add('cart-product')
         containerProduct.innerHTML = `
@@ -99,9 +152,11 @@ const showHTML = () => {
 								d="M6 18L18 6M6 6l12 12"
 							/>
 						</svg>
+
+                        <button>ir al carrito</button>
         `;
         rowProduct.append(containerProduct);
-        total = total + parseInt(product.quantity*product.price.slice(1));
+        total = total + parseInt(product.quantity * product.price.slice(1));
         totalOfProducts = totalOfProducts + product.quantity;
     });
 
