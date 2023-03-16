@@ -10,17 +10,26 @@ class Articulo {
     }
   }
 //Funciones generales para la creación de nuevos prodcutos
-function getNewProducts (){
+function isLocalStorageAvailable() {
+  return localStorage.getItem("newProducts") !== null;
+}
 
-  let newProducts = JSON.parse(localStorage.getItem('newProducts'));
-  let newsProducts = [];
-  if (newProducts != null){
+function getNewProducts (){
+  if(isLocalStorageAvailable()){
+
+    let newProducts = JSON.parse(localStorage.getItem('newProducts'));
+    let newsProducts = [];
+
     for (i = 0; i < newProducts.length;i++){
-      newsProducts.push(JSON.parse(newProducts[i]))
+      newsProducts.push(JSON.parse(newProducts[i]));
     }
+
+    return newsProducts;
+  }else{
+    return [];
   }
-  
-  return newsProducts;
+
+ 
 }
 
 function setNewProducts(newsProducts){
@@ -46,9 +55,37 @@ if (document.querySelector('body').id === 'bodyUser-NewProduct'){
 
   formulario.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevenir que el formulario se envíe automáticamente
-    takesDatesFromForm();
+    if (validarFormulario()){
+      takesDatesFromForm();
+      alert("¡El producto se envío a aprobación!");
+      resetForm();
+    }else {
+      alert("Algún dato ingresado no es valido, vuelva a intentarlo");
+      resetForm();
+    }
   });
 
+  //Funciones utilizadas para la página de newProduct
+  function validarTexto(texto) {
+    const regex = /^[a-zA-Z\s,.]+$/; // Expresión regular que permite letras mayúsculas y minúsculas, espacios en blanco y ".", "."
+    return regex.test(texto);
+  }
+  function validateNumber(valor) {
+    valor = parseInt(valor)
+    if(Number.isInteger(valor) && valor >= 1) {
+      return true;
+    }
+    return false;
+  }
+
+  function validarFormulario(){
+    if(validarTexto(formulario.elements['nombre-articulo'].value) && validarTexto(formulario.elements['descripcion-producto'].value) 
+    && validateNumber(formulario.elements['cantidad'].value) && validateNumber(formulario.elements['precio'].value)){
+      return true;
+    }else{
+      return false;
+    }
+  }  
 
   //Función propias para la pag de User-NewProduct;
   function resetForm(){
@@ -77,7 +114,6 @@ if (document.querySelector('body').id === 'bodyUser-NewProduct'){
     }
 
     setNewProducts(newProducts);
-    resetForm();
   }
 
 }else if (document.querySelector('body').id === 'bodyAdmin-NewProduct'){

@@ -268,10 +268,79 @@ header .menu #btn_menu {
 }
 
 .admin-newProduct {
-    display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 50px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
     
 }
 
+.card{
+  width: 250px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.card__image img{
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+
+.card__info{
+  height: 120px;
+  margin: 10px 10px 0px; 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #49a3d6;
+ 
+}
+
+.card__buttons{
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  border: 5px;
+  margin: 10px;
+  background: #49a3d6;
+  border-radius: 10px;
+
+}
+
+.card__buttons .card__accept{
+  border-radius: 10px;
+  border: none;
+  background: none;
+  background-color: #000;
+  margin: 5px 5px;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.card__buttons .card__reject{
+  border-radius: 10px;
+  border: none;
+  background: none;
+  background-color: #000;
+  margin: 5px 5px;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+}
 
 /* ----- ----- FOOTER ----- ----- */
 .pie-pagina {
