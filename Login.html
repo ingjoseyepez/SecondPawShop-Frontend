@@ -25,27 +25,32 @@
   />
 </head>
 <body>
-    <header>
-      <div class="contenedor">
-        <div class="menu">
-          <i class="fas fa-bars" id="btn_menu"></i>
-          <div id="back_menu"></div>
-          <nav id="nav">
-            <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="/Productos.html">Productos</a></li>
-              <li><a href="/Nosotros.html">Nosotros</a></li>
-              <li><a href="/Contacto.html">Contactos</a></li>
-            </ul>
-          </nav>
-        </div>
-    </header>
+  <header>
+    <div class="contenedor">
+      <div class="menu">
+        <i class="fas fa-bars" id="btn_menu"></i>
+        <div id="back_menu"></div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="/Productos.html">Productos</a></li>
+            <li><a href="/Nosotros.html">Nosotros</a></li>
+            <li><a href="/Contacto.html">Contactos</a></li>
+            <li>
+              <a href="/Signup.html"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </ul>
+        </nav>
+   <!-- <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+   -->
+      </div>
+  </header>
 <section class="container">
 <section class="dos">
  <article class="contrainerlog">
   <article class="container-login">
     <article class="loginin">
-    <form role="form" onsubmit="">
+    <form role="form" onsubmit="signIn(event);" autocomplete="off">
         <p class="title">Bienvenidos</p>
         <input type="text" id="email" name="email
         " placeholder="Username"/>
@@ -59,6 +64,7 @@
  </article>
 </section>
 </section>
+<div class="push"></div>
 <footer class="pie-pagina">
 
   <div class="grupo-2">
@@ -68,7 +74,7 @@
 </footer>
 
 <script src="/js/app.js"></script>
-<script src="/practicaformulario.js"></script>
+<script src="/js/practicaformulario copy.js"></script>
 </body>
 </html>
 
