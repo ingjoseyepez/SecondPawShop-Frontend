@@ -42,7 +42,7 @@ productos.forEach((product) => {
       });
       console.log(carrito);
       console.log(carrito.length);
-      carritoCounter();
+      
       saveLocal();
     }
   });

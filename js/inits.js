@@ -9,6 +9,7 @@ const signUp = e =>{
     //parse convierte los datos en objeto y llama al local storage
     //get item toma los datos del local storage para ser especifico
     //form data son los datos y || los guarda en un arreglo[]
+
     let formData = JSON.parse(localStorage.getItem('formData'
     )) || [];
     //aca  vamos a validar  si existe el usuario 
@@ -19,7 +20,6 @@ const signUp = e =>{
     && JSON.parse(localStorage.getItem('formData')).some(data=>
         data.email.toLowerCase() == email.toLowerCase() &&
         data.doc.toLowerCase() == doc.toLowerCase());
-    
     //con set item enviamos con .push enviamos la informacion al localstorage
     if (!exist) {
         formData.push({doc, name, lastname,email,pwd,dir});
