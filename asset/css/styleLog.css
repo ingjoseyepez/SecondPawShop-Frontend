@@ -7,9 +7,9 @@ body{
   height: 100vh;
 }
 header .contenedor{ 
-background-color:  rgb(74, 68, 79);;
-  width: 100%;
-  height:60px;
+background-color:  #84A59D;
+  width: 100vw;
+  height:10vh;
   display: flex;
   justify-content: center;
   padding: 0px 0px;
@@ -45,8 +45,8 @@ header .menu ul li .iconos {
   text-transform: uppercase;
 }
 
-header .menu ul li a:hover {
-  color: #ffffff;
+header .menu ul li :hover {
+  color: #af1212;
   
 }
 
@@ -98,14 +98,14 @@ li{
     text-align: center;
     grid-column: 1/9;
     grid-row: 1/5;
-   
-    background-size:cover;
-    background-position: center center;
-    background-repeat: no-repeat;
   }
   .contrainerlog{
-    background: rgb(191,173,207);
+    /*background: rgb(191,173,207);
     background: linear-gradient(147deg, rgba(64, 5, 116, 0.904) 0%, rgba(254,200,216,0.4) 100%);  
+    */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #f6bd60;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,22 +131,24 @@ li{
     justify-content: center;
     flex-direction: column;
     
+
   }
+
   form{
     width: 80%;
-    height: 90%;
+    height: 100%;
     justify-content:space-around;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: transparent;
-    border: solid 1px #e6f061; 
-    box-shadow: 0px 0px 100px 10px rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px #84A59D; 
+    box-shadow: 0px 0px 38px 8px rgba(0,0,0,0.4);
     border-radius: 8px;
   }
   p{
     font-size: 26px;
-    color: #7ddef7;
+    color: #84A59D;
     text-shadow: 1px 2px 2px #fff;
    
   }
@@ -160,32 +162,23 @@ li{
     background: rgba(34,34,34,0.75);
     background-color: rgba(0,0,0,0.1);
     text-align: center;
-    border: solid 0.5px #e6f061;
+    border: solid 0.5px #84A59D;
     box-sizing: border-box;
     outline: none;
-    color: rgb(177, 224, 168);
-   
+    color: #F5CAC3;
+    text-shadow: 1px 1px 2px #000000;
   }
 
-  #email::placeholder{
-    color: rgb(147, 248, 164);
-    text-shadow: 1px 1px 2px #fff;
-
-  }
-
-  #pwd::placeholder{
-    color: rgb(255, 135, 135);
-    text-shadow: 1px 1px 2px #fff;
-  }
+  
 
   button{
     height: 30px;
     width: 120px;
     border-radius: 12px;
-    border: solid 0.5px #e6f061;
+    border: solid 0.5px #84A59D;
     font-size: 12px;
-    color:rgb(255, 245, 245);
-    background-color: rgba(0,0,0,0.1);
+    color:#F5CAC3;
+    background-color: transparent;
     text-transform: uppercase;
     cursor: pointer;
 
@@ -194,17 +187,17 @@ li{
   button:hover{
     transition: 2s;
     background-color:rgba(0,0,0,0.4) ;
-   
+   color: rgb(29, 227, 56);
     
   }
   
   .pie-pagina .grupo-2 {
     display: flex;
-   
-    background-color:  rgb(53, 49, 56);;
+    width: 100%;
+    background-color:#84A59D;
     padding: 1px 1px;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     align-items: center;
     justify-content: center;
   }
@@ -212,7 +205,9 @@ li{
     font-size: 10px;
   }
   .pie-pagina{
-       
+      display: flex;
+      height: 7%;
+      width: 100%;
   }
   @media screen and (max-width: 1000px)
 {
@@ -330,6 +325,14 @@ li{
     background: rgba(255, 255, 255, 0.2);
   }
 }
-
+.registerlink{
+  text-decoration: none;
+  color: #84A59D;
+}
+.registerlink:hover{
+  color: #f7e2e2;
+  transition: all 1.2s;
+  border: #000000 solid 1px;
+}
     
   

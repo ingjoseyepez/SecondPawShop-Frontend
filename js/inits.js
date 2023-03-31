@@ -9,6 +9,33 @@ const signUp = e =>{
     //parse convierte los datos en objeto y llama al local storage
     //get item toma los datos del local storage para ser especifico
     //form data son los datos y || los guarda en un arreglo[]
+    var nameRegex = /^[a-zA-Z ]{2,30}$/;
+    var emailRegex = /\S+@\S+.\S+/;
+    var docRegex = /^\d{10}$/;
+    if (!nameRegex.test(name)) {
+        alert("Ingresa un nombre valido porfavor");
+        return false;
+      }
+      if (!emailRegex.test(email)) {
+        alert("Ingresa un email valido porfavor");
+        return false;
+      }
+      if (!docRegex.test(doc)) {
+        alert("Ingresa un documento valido de identidad porfavor");
+        return false;
+      }
+      if (lastname == "") {
+        alert("No ingresaste tu apellido");
+        return false;
+      }
+      if (pwd == "") {
+        alert("No ingresaste ninguna contraseña");
+        return false;
+      }
+      if (dir == "") {
+        alert("Ingrese una direccion valida porfavor");
+        return false;
+      }
 
     let formData = JSON.parse(localStorage.getItem('formData'
     )) || [];
@@ -39,6 +66,7 @@ const signUp = e =>{
 }
 
 function signIn(e) {
+
 let datos = document.getElementById('email').value, password = document.getElementById('pwd').value;
 
 let formData = JSON.parse(localStorage.getItem('formData')) || [];
