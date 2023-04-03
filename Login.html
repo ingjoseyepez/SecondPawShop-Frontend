@@ -5,55 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="rest.css">
+    <link rel="stylesheet" href="/asset/css/normalize.css">
     <link rel="stylesheet" href="/asset/css/styleLog.css">
-    
+    	<link
+	rel="stylesheet"
+	href="https://kit.fontawesome.com/9d0391a552.css"
+	crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600;700&display=swap" rel="stylesheet">
+  <script
+	src="https://kit.fontawesome.com/9d0391a552.js"
+	crossorigin="anonymous"
+  ></script>
+  <link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700"
+	rel="stylesheet"
+  />
 </head>
 <body>
   <header>
-            <nav>
-              <div class="containerlogo">
-              <img src="/img/pata.png" alt="logo">
-              </div>
-            <div class="innav">
-              <div class="bars">
-                <img src="/img/menu.png" alt="">
-              </div>
-                <ul>
-                   <li><a href="" id="select">Home</a></li>
-                   <li><a href="">About</a></li>
-                   <li><a href="">Contact</a></li>
-                   <li><a href="">Donations</a></li>
-                </ul>
-              </div>
-            </nav>
-        
-</header>
+    <div class="contenedor">
+      <div class="menu">
+        <i class="fas fa-bars" id="btn_menu"></i>
+        <div id="back_menu"></div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="/Productos.html">Productos</a></li>
+            <li><a href="/Nosotros.html">Nosotros</a></li>
+            <li><a href="/Contacto.html">Contactos</a></li>
+            <li>
+              <a href="/Signup.html"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </ul>
+        </nav>
+   <!-- <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+   -->
+      </div>
+  </header>
 <section class="container">
 <section class="dos">
  <article class="contrainerlog">
   <article class="container-login">
     <article class="loginin">
-    <form role="form" onsubmit="">
+    <form role="form" onsubmit="signIn(event);" autocomplete="off">
         <p class="title">Bienvenidos</p>
         <input type="text" id="email" name="email
         " placeholder="Username"/>
         <input type="password" id="pwd" name="pwd" placeholder="Password" />
-        <div class="btn-wrapper">
         <button  type="submit">
           iniciar sesion</span>
         </button>
-        </div>
       </form>
-      <div class="register">hola</div>
     </article>
   </article>
  </article>
 </section>
 </section>
+<div class="push"></div>
+<footer class="pie-pagina">
 
+  <div class="grupo-2">
+    <small>&copy; 2023 <b>JSJ SOLUCTION</b> - Todos los Derechos
+      Reservados.</small>
+  </div>
+</footer>
 
-<script src="/practicaformulario.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/practicaformulario copy.js"></script>
 </body>
 </html>
 

@@ -9,7 +9,9 @@ body {
   font-family: "Open Sans", Sans-serif;
   font-size: 16px;
 }
-
+.sub-categories img{
+  width: 40px;
+}
 .contenedor {
   width: 90%;
   max-width: 1000px;
