@@ -46,8 +46,8 @@ header .menu ul li .iconos {
 }
 
 header .menu ul li :hover {
-  color: #af1212;
-  
+  color: #f6bd60;
+  transition: all 1.0s;
 }
 
 header .menu #btn_menu {
