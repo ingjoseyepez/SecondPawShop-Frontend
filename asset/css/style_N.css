@@ -19,6 +19,8 @@ body {
 
 /* ----- ----- HEADER ----- ----- */
 header {
+  display: flex;
+  flex-direction: column;
   background: url("../img/bg_1.jpg") #49a3d6;
   background-repeat: no-repeat;
   background-position: center;
@@ -27,9 +29,10 @@ header {
 }
 
 header .menu{
-  margin: 10px auto;
+  width: 100%;
+  background-color: #0d2033;
   display: flex;
-  align-items: center;
+  justify-content:center;
 }
 
 header .menu ul{
@@ -358,10 +361,7 @@ header .contenedor-texto .texto .profesion {
   }
 }
 
-@media screen and (max-width: 720px)
-{
-
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 750px) {
   header .menu nav {
     position: fixed;
     top: 0;
@@ -402,7 +402,10 @@ header .contenedor-texto .texto .profesion {
     background: rgba(0, 0, 0, 0.1);
     display: none;
   }
-
+  header .menu{
+   justify-content: flex-start;
+   padding: 5px 20px;
+  }
   header .menu #btn_menu {
     display: flex;
     align-items: center;
@@ -419,8 +422,9 @@ header .contenedor-texto .texto .profesion {
     background:  #F6615D;
     padding: 10px 20px;
     border-radius: 50px;
-  }}
+  }
 }
+
 
 @media screen and (max-width: 500px) {
   header .contenedor-texto .texto .nombre {
