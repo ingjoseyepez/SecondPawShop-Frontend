@@ -4,57 +4,49 @@ body{
   display: flex;
   flex-direction: column;
 }
-header .contenedor{ 
-background-color:  rgb(154, 81, 218);;
-  width: 100%;
-  height:12vh;
+header {
+  width: 100%; 
+  background-color: #0a1a2a;
   display: flex;
   justify-content: center;
-  padding: 0px 0px;
-}
-
-header ul{
-  display: flex;
-}
-header .menu {
-  margin: 10px auto;
-  display: flex;
   align-items: center;
-  align-content: center;
-}
-header .menu ul li {
-  list-style: none;
-}
-
-header .menu ul li a {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  margin-left: 20px;
-  color: #eddede;
-  text-transform: uppercase;
-}
-header .menu ul li .iconos {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 20px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-header .menu ul li a:hover {
-  color: #ffffff;
+  }
+  header.menu{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+  }
   
-}
-
-header .menu #btn_menu {
-  display: none;
-}
-li{
-  list-style: none;
-  padding-right: 8px;
-}
+  header .menu ul{
+    display: flex;
+  }
+  
+  header .menu ul li{
+    list-style: none;
+    margin-left: 36px;
+  }
+  
+  header .menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  header .menu ul li a:hover{
+    background: #F6615D;
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+  
+  header .menu #btn_menu {
+    display: none;
+  }
+  header .menu #btn_menu {
+    display: none;
+  }
 
 .containerlogo{
   display: flex;
@@ -92,7 +84,6 @@ li{
 }
 
   .dos{
-  
     text-align: center;
     grid-column: 1/9;
     grid-row: 1/5;
@@ -112,14 +103,15 @@ li{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    max-height: 84vh;
   }
   .container-login{
     flex-direction: column;
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: 600px;
     height: 500px;
     background-color: transparent;
     border-radius: 12px;
@@ -169,6 +161,7 @@ li{
     outline: none;
     color: #F5CAC3;
     text-shadow: 1px 1px 2px #000000;
+    margin-bottom: 5px;
   }
 
   button{
@@ -191,122 +184,21 @@ li{
     
   }
   
-  .pie-pagina .grupo-2 {
-    display: flex;
+  .pie-pagina {
     width: 100%;
-    background-color:#84A59D;
-    padding: 1px 1px;
-    text-align: center;
-    color: #ffffff;
-    align-items: center;
-    justify-content: center;
-  }
-  .pie-pagina .grupo-2 small {
-    font-size: 10px;
-  }
-  .pie-pagina{
-      display: flex;
-      height: 7%;
-      width: 100%;
-  }
-  @media screen and (max-width: 1000px)
-{
-    header{
-       width: 100vw;
-        display: flex;
-        justify-content:center;
-    }
-    .contenedor{
-       align-items: center;
-
-    }
-  
-    .container-items{
-        width: 100vw;   
-    }
-    .container-icon{
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-    }
-   
-    
-  
-    .icon-cart{
-      margin-top: 0px;
-      
-      margin-left: 80px;
-    }
-    .count-products{
-      position: relative;
-      top: -14px;
-      margin-left: 80px;
-
-    }
-}
-@media screen and (max-width: 720px) {
-    header .menu nav {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    background: rgba(6, 9, 13, 0.536);;
-    width: 150px;
-    height: 100vh;
-    padding: 40px;
-    z-index: 1;
-    transition: all 0.5s;
+    background-color: #0a141d;
   }
   
   .pie-pagina .grupo-2 {
-    display: flex;
-    width: 100vw;
-    height: 10vh;
-    background-color:  rgb(154, 81, 218);
-    padding: 1px 1px;
+    background-color: #0a1a2a;
+    padding: 15px 10px;
     text-align: center;
     color: #fff;
-    align-items: center;
-    justify-content: center;
   }
   .pie-pagina .grupo-2 small {
-    font-size: 10px;
+    font-size: 15px;
   }
- 
-  @media screen and (max-width: 1000px)
-{
-    header{
-       width: 100vw;
-        display: flex;
-        justify-content:center;
-    }
-    .contenedor{
-       align-items: center;
 
-    }
-  
-    .container-items{
-        width: 100vw;   
-    }
-    .container-icon{
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-    }
-   
-    
-  
-    .icon-cart{
-      margin-top: 0px;
-      
-      margin-left: 80px;
-    }
-    .count-products{
-      position: relative;
-      top: -14px;
-      margin-left: 80px;
-
-    }
-}
 @media screen and (max-width: 720px) {
     header .menu nav {
     position: fixed;
@@ -388,6 +280,6 @@ li{
     background: rgba(255, 255, 255, 0.2);
   }
 }
-}
+
     
   

@@ -4,7 +4,7 @@ const productos = [
       nombre: "Cama",
       precio: 50,
       img:
-        "/asset/img/imgproducts/cama.webp",
+        "./asset/img/imgproducts/cama.webp",
       cantidad: 1,
     },
     {
@@ -12,7 +12,7 @@ const productos = [
       nombre: "Camisa",
       precio: 100,
       img:
-        "/asset/img/imgproducts/camisa-p.jpg",
+        "./asset/img/imgproducts/camisa-p.jpg",
       cantidad: 1,
     },
     {
@@ -20,7 +20,7 @@ const productos = [
       nombre: "Chalecos",
       precio: 150,
       img:
-        "/asset/img/imgproducts/chalecos.jpg",
+        "./asset/img/imgproducts/chalecos.jpg",
       cantidad: 1,
     },
     {
@@ -28,7 +28,7 @@ const productos = [
       nombre: "Collar de Cuero",
       precio: 200,
       img:
-        "/asset/img/imgproducts/collar-cuero.jpg",
+        "./asset/img/imgproducts/collar-cuero.jpg",
       cantidad: 1,
     },
     {
@@ -36,7 +36,7 @@ const productos = [
       nombre: "Disfraz",
       precio: 50,
       img:
-        "/asset/img/imgproducts/disfraz.jpg",
+        "./asset/img/imgproducts/disfraz.jpg",
       cantidad: 1,
     },
     {
@@ -44,7 +44,7 @@ const productos = [
       nombre: "Gafas Gato",
       precio: 100,
       img:
-        "/asset/img/imgproducts/gafas-gato.jpg",
+        "./asset/img/imgproducts/gafas-gato.jpg",
       cantidad: 1,
     },
     {
@@ -52,7 +52,7 @@ const productos = [
       nombre: "Impermeable",
       precio: 150,
       img:
-        "/asset/img/imgproducts/impermeable.jpg",
+        "./asset/img/imgproducts/impermeable.jpg",
       cantidad: 1,
     },
     {
@@ -60,7 +60,7 @@ const productos = [
       nombre: "Juguete Perro",
       precio: 200,
       img:
-        "/asset/img/imgproducts/jugueteperro.jpg",
+        "./asset/img/imgproducts/jugueteperro.jpg",
       cantidad: 1,
     },
     {
@@ -68,7 +68,7 @@ const productos = [
       nombre: "Pastilla Antipulgas",
       precio: 150,
       img:
-        "/asset/img/imgproducts/pastilla-antipulgas.jpg",
+        "./asset/img/imgproducts/pastilla-antipulgas.jpg",
       cantidad: 1,
     },
     {
@@ -76,7 +76,7 @@ const productos = [
       nombre: "Saco",
       precio: 200,
       img:
-        "/asset/img/imgproducts/saco.jpg",
+        "./asset/img/imgproducts/saco.jpg",
       cantidad: 1,
     },
   ];
