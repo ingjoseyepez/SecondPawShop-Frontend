@@ -29,12 +29,12 @@ body {
   object-fit: cover;
 }
 header {
-width: 100%; 
-background-color: #0a1a2a;
-}
-header.menu{
+  width: 100%; 
+  background-color: #0a1a2a;
+  }
+header .menu{
   width: 100%;
- 
+  background-color: #0a1a2a;
   display: flex;
   justify-content:center;
 }
@@ -63,12 +63,13 @@ header .menu ul li a:hover{
   border-radius: 50px;
 }
 
-header .menu #btn_menu {
+header .menu #btn_menu{
   display: none;
 }
-header .menu #btn_menu {
+header .menu #btn_menu{
   display: none;
 }
+
 
 /* ----- ----- MAIN ----- ----- */
 .main .acerca-de {
@@ -80,6 +81,7 @@ header .menu #btn_menu {
 }
 table {
   margin-top: 50px;
+  max-width: 1200px;
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 80%;
@@ -98,8 +100,58 @@ td{
   text-align: center;
   border: 5px solid #fecb89;
 }
-
-
+img{
+  width: 100px;
+  height: 100px;
+}
+.card__title{
+  width:100%;
+  font-size: 20px;
+}
+.card__category{
+  width:100%;
+  font-size: 16px;
+}
+.card__description{
+  width:100%;
+  font-size: 16px;
+}
+.card__quantity{
+  width:100%;
+  font-size: 16px;
+}
+.card__buttons{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__accept{
+  width:80%;
+  background-color: #4CAF50; 
+  border: none;
+  border-radius: 20px;
+  margin:5px ;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.card__reject{
+  width:90%;
+  background-color: #f44336;
+  border: none;
+  border-radius: 20px;
+  margin-bottom:5px ;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 /* ----- ----- FOOTER ----- ----- */
 .pie-pagina {
   width: 100%;
@@ -117,7 +169,19 @@ td{
 }
 
 /* ----- ----- MEDIA QUERIES ----- ----- */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1200px){
+  table {
+    width: 80%;
+  }
+  
+  .card__accept{
+    width:80%;
+  }
+  .card__reject{
+    width:100%;
+  }
+} 
+@media screen and (max-width: 800px) {
   header .menu nav {
     position: fixed;
     top: 0;
@@ -158,7 +222,10 @@ td{
     background: rgba(0, 0, 0, 0.1);
     display: none;
   }
-
+  header .menu{
+   justify-content: flex-start;
+   padding: 5px 20px;
+  }
   header .menu #btn_menu {
     display: flex;
     align-items: center;
@@ -172,22 +239,12 @@ td{
     transition: all 300ms;
   }
   header .menu ul li a:hover {
-    background: #6bd8e9;
+    background:  #F6615D;
     padding: 10px 20px;
     border-radius: 50px;
   }
-  .card {
-    width: 400px;
-    height: 400px;
-  }
-  .card .img-card {
-    width: 0%;
-  }
-  .card .content {
-    width: 100%;
-  }
-  
 }
+
 @media screen and (max-width: 500px) {
   .card {
     width: 300px;
