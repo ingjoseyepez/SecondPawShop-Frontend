@@ -9,8 +9,14 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 productos.forEach((product) => {
   let content = document.createElement("div");
   content.className = "card";
-  content.innerHTML = `
+  content.innerHTML = ` 
+    <figure>
     <img src="${product.img}">
+    <div class="capa">
+    <h3>${product.nombre}</h3>
+    <p class="price">${product.detalles}</p>
+    </div>
+    </figure>
     <h3>${product.nombre}</h3>
     <p class="price">${product.precio} $</p>
   `;
