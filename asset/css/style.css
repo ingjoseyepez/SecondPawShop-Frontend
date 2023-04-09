@@ -305,17 +305,52 @@
   }
   
   
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
+    header {
+      width: 600px;
+      max-width: 100vh;
+      background-position: center;
+      background-size: cover;
+      height: 500px;
+    }
+    
     header .contenedor-texto .texto .nombre {
-      font-size: 35px;
+      font-size: 75px;
     }
   
     header .contenedor-texto .texto .profesion {
-      font-size: 18px;
+      font-size: 38px;
     }
   
     footer .redes-sociales .contenedor {
       flex-wrap: wrap;
       padding: 20px 0;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    header {
+      width: 500px;
+      max-width: 100vh;
+      background-position: center;
+      background-size: cover;
+      height: 500px;
+    }
+  }
+ 
+  @media screen and (max-width: 450px) {
+    header {
+      width: 450px;
+      max-width: 100vh;
+      background-position: center;
+      background-size: cover;
+      height: 500px;
+    }
+    
+    header .contenedor-texto .texto .nombre {
+      font-size: 55px;
+    }
+  
+    header .contenedor-texto .texto .profesion {
+      font-size: 38px;
     }
   }
