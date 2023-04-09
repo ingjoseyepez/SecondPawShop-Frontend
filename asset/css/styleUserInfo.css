@@ -91,7 +91,7 @@ header .menu #btn_menu {
 }
 .card {
   width: 710px;
-  height: 900px;
+  height: 700px;
   display: flex;
   overflow: hidden;
   background: rgba(6, 9, 13, 0.536);
@@ -135,6 +135,7 @@ header .menu #btn_menu {
 
 .card .content .formulario input[type="text"],
 .card .content .formulario input[type="tel"],
+.card .content .formulario input[type="password"],
 .card .content .formulario input[type="email"],
 .card .content .formulario textarea {
   border: 2px solid #49a3d6;
@@ -146,6 +147,7 @@ header .menu #btn_menu {
 
 .card .content .formulario input[type="text"]:focus,
 .card .content .formulario input[type="tel"]:focus,
+.card .content .formulario input[type="password"],
 .card .content .formulario input[type="email"]:focus,
 .card .content .formulario textarea:focus {
   border: 2px solid #3895ea;
@@ -153,9 +155,10 @@ header .menu #btn_menu {
 
 .card .content .formulario input[type="text"],
 .card .content .formulario input[type="tel"],
+.card .content .formulario input[type="password"],
 .card .content .formulario input[type="email"] {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 
@@ -174,10 +177,10 @@ header .menu #btn_menu {
   background: #387bea;
 }
 .card .content .titulo {
-  font-size: 44px;
+  font-size: 40px;
   font-family:'Cooper Black', Arial, Helvetica, sans-serif;
   line-height: 34px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 300;
   color: #ffffff;
   text-align: center;
