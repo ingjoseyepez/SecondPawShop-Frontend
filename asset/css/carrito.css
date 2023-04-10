@@ -1,27 +1,200 @@
-table{
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 16px;
+}
+.sub-categories img{
+  width: 40px;
+}
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* ----- ----- HEADER ----- ----- */
+.main {
   width: 100%;
+  height: 600px;
+  max-height: 100vh;
+  background: url("../img/fono_c.png") #49a3d6;
+  background-size: cover;
+  object-fit: cover;
+}
+header {
+  width: 100%; 
+  background-color: #0a1a2a;
+  }
+header .menu{
+  width: 100%;
+  background-color: #0a1a2a;
+  display: flex;
+  justify-content:center;
 }
 
-@media screen and (max-width: 1000px)
-{
-    header{
-       width: 100vw;
-        display: flex;
-        justify-content:center;
-    }
-
+header .menu ul{
+  display: flex;
 }
-@media screen and (max-width: 720px) {
-    header .menu nav {
+
+header .menu ul li{
+  list-style: none;
+  margin-left: 36px;
+}
+
+header .menu ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header .menu ul li a:hover{
+  background: #F6615D;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+header .menu #btn_menu{
+  display: none;
+}
+header .menu #btn_menu{
+  display: none;
+}
+
+
+/* ----- ----- MAIN ----- ----- */
+.main .acerca-de {
+  height: 600px;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+table {
+  margin-top: 50px;
+  max-width: 1200px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th {
+  background-color: rgb(53, 212, 240);
+  border: 5px solid #fecb89;
+  border-radius: 20px;
+  text-align: center;
+  padding: 8px;
+}
+td{
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+  border: 5px solid #fecb89;
+}
+img{
+  width: 100px;
+  height: 100px;
+}
+.card__title{
+  width:100%;
+  font-size: 20px;
+}
+.card__category{
+  width:100%;
+  font-size: 16px;
+}
+.card__description{
+  width:100%;
+  font-size: 16px;
+}
+.card__quantity{
+  width:100%;
+  font-size: 16px;
+}
+.card__buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accion{
+  font-size: 40px;
+}
+.card__accept{
+  width:25%;
+  background-color: #4CAF50; 
+  border: none;
+  border-radius: 10px;
+  margin:5px ;
+  color: white;
+  padding: 1px 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.card__reject{
+  width:25%;
+  background-color: #f44336;
+  border: none;
+  border-radius: 10px;
+  margin:5px ;
+  color: white;
+  padding: 1px 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+/* ----- ----- FOOTER ----- ----- */
+.pie-pagina {
+  width: 100%;
+  background-color: #0a141d;
+}
+
+.pie-pagina .grupo-2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+
+/* ----- ----- MEDIA QUERIES ----- ----- */
+@media screen and (max-width: 1200px){
+  table {
+    width: 80%;
+  }
+  
+  .card__accept{
+    width:80%;
+  }
+  .card__reject{
+    width:100%;
+  }
+} 
+@media screen and (max-width: 800px) {
+  header .menu nav {
     position: fixed;
     top: 0;
     right: -250px;
-    background: rgba(6, 9, 13, 0.536);;
-    width: 150px;
+    background:  rgba(6, 9, 13, 0.536);
+    width: 250px;
     height: 100vh;
     padding: 40px;
     z-index: 1;
-    transition: all 0.5s;
+    transition: all 1000ms;
   }
 
   header .menu ul {
@@ -30,28 +203,34 @@ table{
   }
 
   header .menu ul li {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: -30px;
   }
 
   header .menu ul li a {
     color: #fff;
-    font-size: 20px;
   }
-  
+
+  .menu nav img {
+    display: block;
+    width: 60px;
+  }
+
   #back_menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.1);
     display: none;
   }
-
+  header .menu{
+   justify-content: flex-start;
+   padding: 5px 20px;
+  }
   header .menu #btn_menu {
     display: flex;
-    margin-right: 330px;
     align-items: center;
     justify-content: center;
     width: 50px;
@@ -62,8 +241,16 @@ table{
     cursor: pointer;
     transition: all 300ms;
   }
+  header .menu ul li a:hover {
+    background:  #F6615D;
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+}
 
-  header .menu #btn_menu:hover {
-    background: rgba(255, 255, 255, 0.2);
+@media screen and (max-width: 500px) {
+  .card {
+    width: 300px;
+    height: 400px;
   }
 }
