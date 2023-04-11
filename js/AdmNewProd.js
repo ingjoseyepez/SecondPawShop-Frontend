@@ -43,12 +43,44 @@ const tpl = (producto) => {
           </td>
           <td>
             <div class="card__buttons">
-              <button class="card__accept">Aceptar</button>
-              <button class="card__reject">Rechazar</button>
+              <button onclick="aceptarBtn()"  class="card__accept">Aceptar</button>
+              <button onclick="rechazarBtn()" class="card__reject">Rechazar</button>
             </div>
           </td></tr>
         </table>
         `;
         HTMLResponse.append(content);
     });
-}
+    
+  }
+   const aceptarBtn = content.querySelector('.card__accept');
+   aceptarBtn.addEventListener('click', () => {
+     const id = `${producto.id}`;
+     const updateUrl = `http://localhost:8081/Producto/Publicado/${id}`;
+     fetch(updateUrl, { method: 'PUT' })
+       .then(() => {
+         // Actualizar la interfaz de usuario
+         // aquí puedes borrar la fila correspondiente a este producto o cambiar su estilo
+       })
+       .catch((error) => {
+         console.error('Error:', error);
+       });
+   });
+
+   const rechazarBtn = content.querySelector('.card__reject');
+   rechazarBtn.addEventListener('click', () => {
+     const id = producto.id; 
+     const updateUrl = ``; 
+     fetch(updateUrl, { method: 'PUT' }) 
+       .then(() => {
+        
+       })
+       .catch((error) => {
+         console.error('Error:', error);
+       });
+   });
+
+
+
+
+
