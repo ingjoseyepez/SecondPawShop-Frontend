@@ -1,21 +1,22 @@
-const API_URL = 'http://localhost:8081/Producto/Crear';
+const API_URL = 'http://localhost:8081/Usuario/registrar';
 let products = [];
 const createProduct = () => {
     const formData = new FormData(document.querySelector('#formAdd'));
   
-    if(!formData.get('nombre-articulo').length || !formData.get('cate') || !formData.get('descripcion-producto') || !formData.get('cantidad') ||!formData.get('precio')) {
+    if(!formData.get('doc').length || !formData.get('name') || !formData.get('lastname') || !formData.get('email') || !formData.get('tel') || !formData.get('dir')|| !formData.get('pwd')) {
       document.querySelector('#msgFormAdd').innerHTML = '* Llena todos los campos';
       return;
     }
     document.querySelector('#msgFormAdd').innerHTML = '';
   
     const product = {
-    idUsuarioFK:window.localStorage.getItem('idUsuario'),  
-    nombre: formData.get('nombre-articulo'),
-    categoria: formData.get('cate'),
-    descripcion: formData.get('descripcion-producto'),
-    cantidad:formData.get('cantidad'),
-    precio:formData.get('precio'),
+    idUsuario: formData.get('doc'),
+    nombre: formData.get('name'),
+    apellido: formData.get('lastname'),
+    correo:formData.get('email'),
+    celular:formData.get('tel'),
+    direccion: formData.get('dir'),
+    contrasena : formData.get('pwd'),
     }
   
     console.log(product)
@@ -36,6 +37,5 @@ const createProduct = () => {
       alertManager('success', response.mensaje)
       getProducts();
     })
+    document.querySelector('#formEdit').reset();
   }
-  
-  
