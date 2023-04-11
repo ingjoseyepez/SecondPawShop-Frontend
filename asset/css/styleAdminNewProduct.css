@@ -70,15 +70,6 @@ header .menu #btn_menu{
   display: none;
 }
 
-
-/* ----- ----- MAIN ----- ----- */
-.main .acerca-de {
-  height: 600px;
-  max-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
 table {
   margin-top: 50px;
   max-width: 1200px;
