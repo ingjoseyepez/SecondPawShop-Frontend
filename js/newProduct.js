@@ -10,6 +10,7 @@ const createProduct = () => {
     document.querySelector('#msgFormAdd').innerHTML = '';
   
     const product = {
+    idUsuarioFK:window.localStorage.getItem('idUsuario'),  
     nombre: formData.get('nombre-articulo'),
     categoria: formData.get('cate'),
     descripcion: formData.get('descripcion-producto'),

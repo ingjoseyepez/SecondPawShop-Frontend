@@ -40,16 +40,17 @@
         <div class="img-card"><img src="./asset/img/users.jpg" alt=""></div>
         <div class="content">
              <h3 class="titulo">Perfil</h3>
-                <form class="formulario"action="" method="POST" onsubmit="return validarFormulario()">
-                  <input type="text" placeholder="Identificacion"  id="Identificacion" name="id" required>
+                <form class="formulario"id="formEdit">
+                  <input type="text" placeholder="Identificacion"  id="Identificacion" name="id" disabled>
                   <input type="text" placeholder="Nombre"  id="name" name="nombre" required>
                   <input type="text" placeholder="Apellido"  id="apellido" name="apellido" required>
-                  <input type="email" placeholder="Correo" id="email" name="email" required>
+                  <input type="text" placeholder="Correo" id="email" name="email" required>
                   <input type="tel" placeholder="Telefono"  id="telefono" name="telefono" required>
                   <input type="text" placeholder="Direcion"  id="dir" name="direcion" required>
-                  <input type="password" placeholder="password"  id="password" name="password" required>
-                  <input class="boton" type="submit" value="Actualizar">
+                  <input type="text" placeholder="password"  id="password" name="password" required>
+                  <button type="button" class="boton"onclick="updateProduct()">Actualizar</button>
                 </form> 
+                <span id="msgFormEdit" class="msg-error"></span>
         </div>
     </div>
     </section>

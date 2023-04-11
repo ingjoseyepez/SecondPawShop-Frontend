@@ -42,12 +42,14 @@
       <article class="contrainerlog">
         <article class="container-login">
           <article class="loginin">
-            <form role="form" onsubmit="signIn(event);" autocomplete="off">
+            <form>
               <p class="title">Bienvenidos</p>
-              <a class="registerlink" href="./Signup.html">¿No Tienes Cuenta? Registrate &subdot;</a>
-              <input type="text" id="email" name="email " placeholder="Username" />
-              <input type="password" id="pwd" name="pwd" placeholder="Password" />
-              <button type="submit"><span>iniciar sesion</span> </button>
+              <a class="registerlink" href="./Signup.html">¿No tienes cuenta? Regístrate &subdot;</a>
+              <label for="idusuario">Documento:</label>
+              <input type="text" id="idusuario" name="id" placeholder="Documento" />
+              <label for="pwd">Contraseña:</label>
+              <input type="password" id="pwd" name="pwd" placeholder="Contraseña" />
+              <button type="submit"  id="submit-btn"><span>Iniciar sesión</span></button>
             </form>
           </article>
         </article>
@@ -63,7 +65,7 @@
     </footer>
   </section>
   <script src="./js/app.js"></script>
-  <script src="./js/practicaformulario copy.js"></script>
+  <script src="./js/validar.js"></script>
 </body>
 
 </html>

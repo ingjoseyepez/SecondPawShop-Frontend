@@ -37,4 +37,5 @@ const createProduct = () => {
       alertManager('success', response.mensaje)
       getProducts();
     })
+    document.querySelector('#formEdit').reset();
   }
