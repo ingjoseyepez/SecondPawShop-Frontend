@@ -249,7 +249,7 @@ header .menu #btn_menu {
 
 .card {
   width: 500px;
-  height: 600px;
+  height: 650px;
   display: flex;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.615);
@@ -447,7 +447,7 @@ header .menu #btn_menu {
 
   .card {
     width: 400px;
-    height: 600px;
+    height: 650px;
   }
 
   .card .img-card {
