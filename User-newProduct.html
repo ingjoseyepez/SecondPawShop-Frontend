@@ -39,32 +39,29 @@
     <div class="card">
       <div class="content">
         <h3 class="titulo">¡Publica un Articulo nuevo!</h3>
-           <form class="formulario" id="formAdd">
-            <label for="nombre-articulo" >Nombre del artículo:</label>
-            <input type="text" placeholder="Nombre Articulo"  id="nombre-articulo" name="nombre-articulo" required>
-            <label for="categoria" class="cate">Categoría:</label>
-            <select name="categoria" id="cat">
-              <option value="ropa">Salud</option>
-              <option value="tecnologia">Bienestar</option>
-              <option value="hogar">Ropa</option>
-              <option value="deporte">Accesorio</option>
-            </select>
-
-            <label for="descripcion-producto">Descripción del producto:</label>
-            <textarea id="descripcion-producto" name="descripcion-producto"></textarea>
-
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad">
-
-            <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio">
-            
-            <label for="Imagen">Imagen:</label>
-            <input type="url" id="img" name="img">
-          
-            <button type="button" class="boton" onclick="createProduct()">Enviar</button>
-          </form>
-          <span id="msgFormAdd" class="msg-error"></span>
+        <form class="formulario" id="formAdd">
+          <input type="text" placeholder="Identificacion" id="Identificacion" class="identificacion" name="identificacion" required>
+          <label for="nombre-articulo">Nombre del artículo:</label>
+          <input type="text" placeholder="Nombre Articulo" id="nombre-articulo" name="nombre-articulo" required>
+          <label for="categoria" class="cate">Categoría:</label>
+          <select name="cate" id="cate">
+            <option value="ropa">Salud</option>
+            <option value="tecnologia">Bienestar</option>
+            <option value="hogar">Ropa</option>
+            <option value="deporte">Accesorio</option>
+          </select>
+          <label for="descripcion-producto">Descripción del producto:</label>
+          <textarea id="descripcion-producto" name="descripcion-producto"></textarea>
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" id="cantidad" name="cantidad">
+          <label for="precio">Precio:</label>
+          <input type="number" id="precio" name="precio">
+          <label for="Imagen">Imagen:</label>
+          <input type="url" id="img" class="img" name="img">
+          <button type="button" class="boton" onclick="createProduct()">Enviar</button>
+          <button type="button" id="clearButton" class="boton" onclick="clearForm()">Limpiar</button>
+          <p id="msgFormAdd"></p>
+        </form>
       </div>
     </div>
  
