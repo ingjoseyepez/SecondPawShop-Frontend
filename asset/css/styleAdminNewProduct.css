@@ -69,6 +69,13 @@ header .menu #btn_menu{
 header .menu #btn_menu{
   display: none;
 }
+table {
+  margin-top: 50px;
+  max-width: 1200px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
 
 table {
   margin-top: 50px;
