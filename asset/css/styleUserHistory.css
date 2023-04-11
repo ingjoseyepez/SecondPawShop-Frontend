@@ -89,6 +89,12 @@ header .menu #btn_menu{
   display: flex;
   justify-content: center;
 }
+#historial{
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 table {
   margin-top: 50px;
   max-width: 1200px;

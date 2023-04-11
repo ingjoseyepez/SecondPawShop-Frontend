@@ -1,50 +1,43 @@
 const userData = JSON.parse(localStorage.getItem("userData"));
-const id= userData.idUsuario;
-const url = "http://localhost:8080/Usuario/Historial/"+id;
-const HTMLResponse = document.getElementById("table");
+const id = userData.idUsuario;
+const url = "http://localhost:8080/Usuario/Historial/" + id;
+const HTMLResponse = document.getElementById("historial");
 
 fetch(url)
-.then((response) => response.json())
-.then((producto) => tpl(producto))
+  .then((response) => response.json())
+  .then((productos) => {
+    const table = tpl(productos);
+    HTMLResponse.innerHTML = table;
+  });
 
-
-
-const tpl = (producto) => {
-    producto.forEach((producto) => {
-        let content = document.createElement("div");
-        content.className = "";
-        HTMLResponse.innerHTML= `
-            <table>
-            <tr>
-             <th>Productos</th>            
-             <th>Nombres</th>            
-             <th>Categoria</th>            
-             <th>Descripcion</th>            
-             <th>Cantidad</th>            
-             <th>Precio</th>                      
-            </tr>
-            <tr>     
-            <td>
-            <img src="./asset/img/userPictures/sacoPerro.jpg" alt="Imagen del artículo">
-          </td>
-          <td>
-            <h2 class="card__title">${producto.nombre}</h2>
-          </td>
-          <td>
-            <p class="card__category">${producto.categoria}</p>
-          </td>
-          <td>
-            <p class="card__description">${producto.descripcion}</p>
-          </td>
-          <td>
-            <p class="card__quantity">${producto.cantidadAComprar}</p>
-          </td>
-          <td>
-            <p class="card__quantity">${producto.precioTotal}</p>
-          </td>
-         </tr>
-            </table>
-        `
-        HTMLResponse.append(content);
-    });
-}
+const tpl = (productos) => {
+  let table = `
+    <table>
+      <thead>
+        <tr>
+          <th>Productos</th>
+          <th>Nombres</th>
+          <th>Categoria</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+  productos.forEach((producto) => {
+    table += `
+      <tr>
+        <td class='centered'><img src="${producto.imagen}"></td>
+        <td class='centered'><h2 class="card__title">${producto.nombre}</h2></td>
+        <td class='centered'><p class="card__category">${producto.categoria}</p></td>
+        <td class='centered'><p class="card__quantity">${producto.cantidadAComprar}</p></td>
+        <td class='centered'><p class="card__quantity">${producto.precioTotal}</p></td>
+      </tr>
+    `;
+  });
+  table += `
+      </tbody>
+    </table>
+  `;
+  return table;
+};
