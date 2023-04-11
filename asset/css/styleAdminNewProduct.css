@@ -69,14 +69,12 @@ header .menu #btn_menu{
 header .menu #btn_menu{
   display: none;
 }
-table {
-  margin-top: 50px;
-  max-width: 1200px;
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 80%;
+#historial{
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 table {
   margin-top: 50px;
   max-width: 1200px;
