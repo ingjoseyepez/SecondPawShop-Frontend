@@ -6,7 +6,7 @@ GIT pull origin nombreDeLaRama
 
 Saber el estado del Staging (Cambios que se han hecho en el repositorio actual, cambios guarados para el commint o no)
 GIT status
-
+hola
 Para agregar esos cambios al Staging(lo que enviará al repositorio en un futuro push creando un commit con ese Staging)
 GIT add “nombreDelArchivoConSu.Tipo”  
 (tipo: txt,pdf,py,etc)  si coloca quiere subir todo en vez de "“nombreDelArchivoConSu.Tipo”" colocar .
