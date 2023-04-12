@@ -1,5 +1,5 @@
 
-const url = "http://localhost:8080/Producto/Verificando";
+const url = "http://localhost:8081/Producto/Verificando";
 const HTMLResponse = document.getElementById("historial");
 
 fetch(url)

@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/Producto/Publicado";
+const url = "http://localhost:8081/Producto/Publicado";
 const HTMLResponse = document.getElementById("shopContent");
 
 fetch(url)

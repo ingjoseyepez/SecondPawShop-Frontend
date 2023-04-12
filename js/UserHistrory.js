@@ -1,6 +1,6 @@
 const userData = JSON.parse(localStorage.getItem("userData"));
 const id = userData.idUsuario;
-const url = "http://localhost:8080/Usuario/Historial/" + id;
+const url = "http://localhost:8081/Usuario/Historial/" + id;
 const HTMLResponse = document.getElementById("historial");
 
 fetch(url)
