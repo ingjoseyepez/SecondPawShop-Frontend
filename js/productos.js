@@ -5,8 +5,6 @@ fetch(url)
 .then((response) => response.json())
 .then((producto) => tpl(producto))
 
-
-
 const tpl = (producto) => {
   producto.forEach((producto) => {
     let contenido = document.createElement("div");
@@ -26,7 +24,9 @@ const tpl = (producto) => {
     `
     HTMLResponse.append(contenido);
   });
+  
 }
+
 
 
   
