@@ -88,9 +88,6 @@ header .menu #btn_menu {
 
 .categories{
   margin-top: 30px;
-}
-.sub-categories {
-  /* border:solid 1px #762b2b; */
   width: 100%;
   height: 90%;
   display: flex;
@@ -98,25 +95,62 @@ header .menu #btn_menu {
   align-items: center;
   justify-content: center;
 }
-.salud {
-  background-color: #70eb72;
-}
-.sub-categories img {
-  width: 70px;
+
+.catg img {
+  width: 50px;
   border-radius: 50%;
+  border: 5px solid #fff;
  
 }
-.sub-categories a {
-  border-radius: 50%;
-  
+.catg  a {
+  border-radius: 50%;  
 }
-.item-categories {
-  margin: 0px 5px;
+/* ----- ----- Modal ----- ----- */
+.catg {
+  position:relative;
+   height: 120px;
+   cursor: pointer;
+   width: 120px;
+   border-radius: 50%;
+   margin: 5px;
+   overflow: hidden;
 }
-.item-categories:hover img {
-  width: 100px;
-  transition: all 0.3s;
+.catg  img{
+   width: 100%;
+   height: 100%;
+   transition: all 400ms ease-out;
+   will-change: transform;
 }
+.catg  .capa{
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,103,123,0.7);
+   transition: all 400ms ease-out;
+   opacity: 0;
+   visibility: hidden;
+  text-align: center;
+}
+.catg :hover > .capa {
+   opacity: 1;
+   visibility: visible;
+}
+.catg :hover > .capa h3{
+   margin-top: 15px;
+   margin-bottom: 10px;
+}
+.catg :hover > img{
+   transform: scale(1.3);
+}
+.catg  .capa h3{
+   color: #fff;
+   font-weight: 400;
+   padding-top: 20px;
+   transition: all 400ms ease-out;
+
+}
+
 /*product cards*/
 .shop-content {
   width: 80%;

@@ -43,14 +43,3 @@ let button = form.submit.addEventListener("click", (e) => {
     });
 });
 
-// En las páginas posteriores, verifica si el usuario está conectado
-const username = localStorage.getItem("username");
-const role = localStorage.getItem("role");
-
-if (!username || !role) {
-  // No hay información del usuario en localStorage, redirige al usuario a la página de inicio de sesión
-  window.open("login.html", "_self");
-} else {
-  // El usuario está conectado, haz algo aquí...
-}
-  
