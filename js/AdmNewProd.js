@@ -1,5 +1,5 @@
 
-const url = "http://localhost:8081/Producto/Verificando";
+const url = "http://localhost:8080/Producto/Verificando";
 const HTMLResponse = document.getElementById("historial");
 
 fetch(url)
@@ -49,7 +49,7 @@ const tpl = (productos) => {
 const eliminarProducto = (idUsuarioFK, nombre) => {
   const confirmacion = confirm(`¿Seguro que deseas eliminar el producto ${nombre}?`);
   if (confirmacion) {
-    const url = `http://localhost:8081/Producto/Eliminar/${idUsuarioFK}/${nombre}`;
+    const url = `http://localhost:8080/Producto/Eliminar/${idUsuarioFK}/${nombre}`;
 
     fetch(url, {
       method: 'DELETE'
