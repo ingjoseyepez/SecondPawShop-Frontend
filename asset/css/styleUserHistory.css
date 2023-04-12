@@ -39,9 +39,7 @@ header .menu{
   display: flex;
   justify-content:center;
 }
-header .menu nav{
-  width: 700px;
-}
+
 
 header .menu ul{
   display: flex;
@@ -77,6 +75,7 @@ header .menu #btn_menu{
 
 /* ----- ----- MAIN ----- ----- */
 .main .acerca-de {
+  width: 100%;
   height: 600px;
   max-height: 100vh;
   display: flex;
@@ -266,6 +265,9 @@ img{
  #historial{
   width: 600px;
  }
+ .main {
+  width: 800px;
+}
 }
 
 @media screen and (max-width: 600px) {

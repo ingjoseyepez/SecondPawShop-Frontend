@@ -108,12 +108,10 @@ header {
 }
 
 .contrainerlog {
-  /*background: rgb(191,173,207);
-    background: linear-gradient(147deg, rgba(64, 5, 116, 0.904) 0%, rgba(254,200,216,0.4) 100%);  
-    */
+  background: url("../img/back.png") #f6bd60;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #f6bd60;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
