@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/Producto/Publicado";
+const url = "http://localhost:8080/Producto/salud";
 const HTMLResponse = document.getElementById("shopContent");
 
 fetch(url)
@@ -28,5 +28,3 @@ const tpl = (producto) => {
   });
 }
 
-
-  
