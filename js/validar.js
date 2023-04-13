@@ -6,7 +6,7 @@ const form = {
 
 let button = form.submit.addEventListener("click", (e) => {
   e.preventDefault();
-  const login = "http://localhost:8081/Usuario/login";
+  const login = "http://localhost:8080/Usuario/login";
 
   fetch(login, {
     method: "POST",
@@ -23,6 +23,7 @@ let button = form.submit.addEventListener("click", (e) => {
     .then((data) => {
       console.log(data);
       if (data.error) {
+        
         alert("Error Password or Username");
       } else {
         // Almacena la información del usuario en localStorage
@@ -36,6 +37,7 @@ let button = form.submit.addEventListener("click", (e) => {
           window.open("Admin-newProduct.html", "_self");
         }
       }
+        document.querySelector("#formLogin").reset();
     })
     .catch((err) => {
       console.log(err);
