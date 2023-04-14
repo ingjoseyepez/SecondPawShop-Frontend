@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8081/Producto/Crear';
+const API_URL = 'http://localhost:8080/Producto/Crear';
 const userData = JSON.parse(localStorage.getItem("userData"));
 document.getElementById("Identificacion").value = userData.idUsuario;
 let products = [];

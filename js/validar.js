@@ -23,7 +23,7 @@ let button = form.submit.addEventListener("click", (e) => {
     .then((data) => {
       console.log(data);
       if (data.error) {
-        
+        document.querySelector("#formLogin").reset();
         alert("Error Password or Username");
       } else {
         // Almacena la información del usuario en localStorage
@@ -37,10 +37,11 @@ let button = form.submit.addEventListener("click", (e) => {
           window.open("Admin-newProduct.html", "_self");
         }
       }
-        document.querySelector("#formLogin").reset();
+        
     })
     .catch((err) => {
       console.log(err);
+      document.querySelector("#formLogin").reset();
       alert("Error Password or Username");
     });
 });
