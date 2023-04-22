@@ -1,16 +1,20 @@
-console.log("funcionando");
-document.querySelector('#boton').addEventListener('click',traerDatos());
-
-function traerDatos(params) {
-    console.log('dentro de la funcion');
-
-    const xhtpp = new XMLHttpRequest();
-
-    xhtpp.open('GET','rcatalogo.json',true);
-    xhtpp.send();
-    xhtpp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-            console.log(this.responseText);
+//Funciones
+function crearLisent(isLogin) {
+    document.addEventListener('click', function(event) {
+        // Verificar si el elemento clickeado es el botón "miBoton"
+        if (event.target && event.target.id === 'btn-comprar') {
+            console.log("¿Hola?");
+          if (isLogin == 'true'){
+            console.log("Está logeado");
+          }else if(isLogin == 'false'){
+            alert("¡Debes iniciar sesión para hacer compras!");
+          }else{
+            console.log ("Algo salió mal");
+          }
+          
         }
-    }
+    });
 }
+
+//Variables y logica
+crearLisent (isLogin);
