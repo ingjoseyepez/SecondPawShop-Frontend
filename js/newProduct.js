@@ -1,3 +1,8 @@
+if (isLogin === 'false'){
+  window.open("index.html", "_self");
+  alert("¡Necesitas estar logeado para acceder a estos")
+}
+
 const API_URL = 'http://localhost:8080/Producto/Crear';
 const userData = JSON.parse(localStorage.getItem("userData"));
 document.getElementById("Identificacion").value = userData.id;

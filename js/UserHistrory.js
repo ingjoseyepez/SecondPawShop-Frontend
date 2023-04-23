@@ -1,3 +1,7 @@
+if (isLogin === 'false'){
+  window.open("index.html", "_self");
+  alert("¡Necesitas estar logeado para acceder a estos")
+}
 const userData = JSON.parse(localStorage.getItem("userData"));
 const id = userData.id;
 const url = "http://localhost:8080/Usuario/Historial/" + id;
