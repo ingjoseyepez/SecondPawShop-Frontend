@@ -1,7 +1,8 @@
 const API_URL = 'http://localhost:8080/Usuario/Actualizar';
 const userData = JSON.parse(localStorage.getItem("userData"));
 
-document.getElementById("Identificacion").value = userData.idUsuario;
+
+document.getElementById("Identificacion").value = userData.id;
 document.getElementById("name").value = userData.nombre;
 document.getElementById("apellido").value = userData.apellido;
 document.getElementById("email").value = userData.correo;
@@ -33,15 +34,23 @@ const updateProduct = () => {
       'Content-Type': 'application/json'
     }
   })
-  .then(res => res.json())
+  .then(res => {
+    res.json()
+    userData.nombre = product.nombre;
+    userData.apellido = product.apellido;
+    userData.correo = product.correo;
+    userData.celular = product.celular;
+    userData.direccion = product.direccion;
+    userData.contrasena = product.contrasena;
+    localStorage.setItem("userData",JSON.stringify(userData));
+    
+  })
   .catch(error => {
     alertManager('error', error);
+
   })
   .then(response => {
-    alertManager('success', response.mensaje);
-    getProducts();
+    alertManager('success', response.mensaje);    
   });
-  document.querySelector("#btnReset").addEventListener("click", function() {
-    location.reload();
-  });
+
 }

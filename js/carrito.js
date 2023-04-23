@@ -1,5 +1,5 @@
 //Funciones
-function crearLisent(isLogin) {
+function crearLisent() {
     document.addEventListener('click', function(event) {
         // Verificar si el elemento clickeado es el botón "miBoton"
         if (event.target && event.target.id === 'btn-comprar') {
@@ -17,4 +17,4 @@ function crearLisent(isLogin) {
 }
 
 //Variables y logica
-crearLisent (isLogin);
+crearLisent ();

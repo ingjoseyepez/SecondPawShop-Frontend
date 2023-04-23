@@ -10,5 +10,4 @@ function mostrarCarro(){
 }
 
 //Variables y logica
-const isLogin = localStorage.getItem('isLoggedIn');
 mostrarCarro();

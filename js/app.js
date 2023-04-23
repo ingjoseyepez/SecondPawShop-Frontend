@@ -16,12 +16,26 @@ function ocultar_menu(){
     nav.style.right = "-250px";
     background_menu.style.display = "none";
 }
-const cerrarSesionBtn = document.getElementById("logout-button");
-cerrarSesionBtn.addEventListener("click", cerrarSesion);
+
 function cerrarSesion() {
-    // Elimina la cookie que indica que el usuario ha iniciado sesión
-    document.cookie = "sesion=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-  
+    
+    localStorage.clear();
+    localStorage.setItem('isLoggedIn', false);
     // Redirige al usuario a la página de inicio de sesión
     window.location.href = "./Login.html";
-  }
+    alert("¡Has cerrado tu sesión!");
+}
+
+const isLogin = localStorage.getItem('isLoggedIn');
+const cerrarSesionBtn = document.getElementById("logout-button");
+
+
+if (isLogin === 'true'){
+    cerrarSesionBtn.style.visibility = "visible";
+    cerrarSesionBtn.addEventListener("click", cerrarSesion);
+    
+}else if (isLogin === 'false'){
+    cerrarSesionBtn.style.visibility  = "hidden";
+}else {
+    console.log("Algo salió mal");
+}
