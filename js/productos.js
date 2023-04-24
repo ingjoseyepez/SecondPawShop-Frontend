@@ -1,5 +1,8 @@
-//Funciones
-function traerProductos () {
+//Variables
+let url = "http://localhost:8080/Producto/Publicado";
+const HTMLResponse = document.getElementById("shopContent");
+
+function traerProductos() {
   fetch(url)
   .then((response) => response.json())
   .then((producto) => tpl(producto))
@@ -23,15 +26,37 @@ function traerProductos () {
       `
       HTMLResponse.append(contenido);
     });
-    
   }
 }
 
-//Variables
-const url = "http://localhost:8080/Producto/Publicado";
-const HTMLResponse = document.getElementById("shopContent");
+traerProductos(); // cargar los productos al cargar la página
 
-traerProductos ();
+function cambiarUrl() {
+  const nuevaUrl = "http://localhost:8080/Producto/salud";
+  url = nuevaUrl;
+  HTMLResponse.innerHTML = "";
+  traerProductos(); // cargar los productos desde la nueva URL
+}
+function cambiarUrl_a() {
+  const nuevaUrl = "http://localhost:8080/Producto/accesorio";
+  url = nuevaUrl;
+  HTMLResponse.innerHTML = "";
+  traerProductos(); // cargar los productos desde la nueva URL
+}
+function cambiarUrl_r() {
+  const nuevaUrl = "http://localhost:8080/Producto/ropa";
+  url = nuevaUrl;
+  HTMLResponse.innerHTML = "";
+  traerProductos(); // cargar los productos desde la nueva URL
+}
+function cambiarUrl_b() {
+  const nuevaUrl ="http://localhost:8080/Producto/bienestar";
+  url = nuevaUrl;
+  HTMLResponse.innerHTML = "";
+  traerProductos(); // cargar los productos desde la nueva URL
+}
+
+
 
 
 
