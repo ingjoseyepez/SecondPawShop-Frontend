@@ -18,7 +18,7 @@ function traerProductos () {
           </figure>
           <h3>${producto.nombre}</h3>
           <p class="price">${producto.precio} $</p>
-          <button class="comprar" id="btn-comprar">Comprar</button>
+          <button class="comprar" id="btn-comprar" data-values="${producto.idUsuarioFK}-${producto.nombre}-${producto.precio}">Comprar</button>
         </div>
       `
       HTMLResponse.append(contenido);

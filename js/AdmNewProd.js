@@ -62,10 +62,10 @@ const eliminarProducto = (idUsuarioFK, nombre) => {
     })
       .then(() => {
         console.log('Producto eliminado correctamente');
+        location.reload();
         // Remover la fila correspondiente al producto eliminado del DOM
         const filaProductoEliminado = document.querySelector(`tr[data-id="${idUsuarioFK}"]`);
         filaProductoEliminado.remove();
-        location.reload();
       })
       .catch(error => console.error(error));
 
@@ -100,9 +100,10 @@ const publicarProducto = (idUsuarioFK, nombre) => {
     })
     .then(data => {
       console.log(data);
-      location.reload();
+      
     })
-    .catch(error => {
+    .catch(error => {+
+      location.reload();
       console.error(error);
     });
         
