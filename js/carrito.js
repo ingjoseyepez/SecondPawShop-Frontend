@@ -47,7 +47,7 @@ function crearLisent() {
           }else if(isLogin == 'false'){
             alert("¡Debes iniciar sesión para hacer compras!");
           }else{
-            console.log ("Algo salió mal");
+            console.log ("Algo salió mal 2");
           }
           
         }

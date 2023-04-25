@@ -37,5 +37,6 @@ if (isLogin === 'true'){
 }else if (isLogin === 'false'){
     cerrarSesionBtn.style.visibility  = "hidden";
 }else {
-    localStorage.setItem('isLoggedIn', false);
+    console.log("Algo salió mal 1");
+    
 }
