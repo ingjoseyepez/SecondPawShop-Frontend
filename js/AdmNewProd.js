@@ -8,11 +8,11 @@ const url = "https://deployinrailway-production.up.railway.app/Producto/Verifica
 const HTMLResponse = document.getElementById("historial");
 
 fetch(url)
-.then((response) => response.json())
-.then((productos) => {
-  const table = tpl(productos);
-  HTMLResponse.innerHTML = table;
-});
+  .then((response) => response.json())
+  .then((productos) => {
+    const table = tpl(productos);
+    HTMLResponse.innerHTML = table;
+  });
 
 const tpl = (productos) => {
   let table = `
