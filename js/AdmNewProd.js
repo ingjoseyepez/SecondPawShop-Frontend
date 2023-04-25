@@ -4,7 +4,7 @@ if (isLogin === 'false'){
 }
 
 //variables
-const url = "http://localhost:8080/Producto/Verificando";
+const url = "https://deployinrailway-production.up.railway.app/Producto/Verificando";
 const HTMLResponse = document.getElementById("historial");
 
 fetch(url)
@@ -55,7 +55,7 @@ const tpl = (productos) => {
 const eliminarProducto = (idUsuarioFK, nombre) => {
   const confirmacion = confirm(`¿Seguro que deseas ELIMINAR el producto ${nombre}?`);
   if (confirmacion) {
-    const url = `http://localhost:8080/Producto/Eliminar/${idUsuarioFK}/${nombre}`;
+    const url = `https://deployinrailway-production.up.railway.app/Producto/Eliminar/${idUsuarioFK}/${nombre}`;
 
     fetch(url, {
       method: 'DELETE'
@@ -76,7 +76,7 @@ const eliminarProducto = (idUsuarioFK, nombre) => {
 const publicarProducto = (idUsuarioFK, nombre) => {
   const confirmacion = confirm(`¿Seguro que deseas PUBLICAR el producto ${nombre}?`);
   if (confirmacion) {
-    const url = 'http://localhost:8080/Producto/VerificandoToPublicado';
+    const url = 'https://deployinrailway-production.up.railway.app/Producto/VerificandoToPublicado';
 
     // Crea el objeto JSON
     const data = { "idUsuarioFK": idUsuarioFK, "nombre": nombre };
