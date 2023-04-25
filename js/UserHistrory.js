@@ -4,7 +4,7 @@ if (isLogin === 'false'){
 }
 const userData = JSON.parse(localStorage.getItem("userData"));
 const id = userData.id;
-const url = "http://localhost:8080/Usuario/Historial/" + id;
+const url = "https://deployinrailway-production.up.railway.app/Usuario/Historial/" + id;
 const HTMLResponse = document.getElementById("historial");
 
 fetch(url)

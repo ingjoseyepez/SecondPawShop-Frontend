@@ -1,5 +1,5 @@
 //Variables
-let url = "http://localhost:8080/Producto/Publicado";
+let url = "https://deployinrailway-production.up.railway.app/Producto/Publicado";
 const HTMLResponse = document.getElementById("shopContent");
 
 function traerProductos() {
@@ -32,25 +32,25 @@ function traerProductos() {
 traerProductos(); // cargar los productos al cargar la página
 
 function cambiarUrl() {
-  const nuevaUrl = "http://localhost:8080/Producto/salud";
+  const nuevaUrl = "https://deployinrailway-production.up.railway.app/Producto/salud";
   url = nuevaUrl;
   HTMLResponse.innerHTML = "";
   traerProductos(); // cargar los productos desde la nueva URL
 }
 function cambiarUrl_a() {
-  const nuevaUrl = "http://localhost:8080/Producto/accesorio";
+  const nuevaUrl = "https://deployinrailway-production.up.railway.app/Producto/accesorio";
   url = nuevaUrl;
   HTMLResponse.innerHTML = "";
   traerProductos(); // cargar los productos desde la nueva URL
 }
 function cambiarUrl_r() {
-  const nuevaUrl = "http://localhost:8080/Producto/ropa";
+  const nuevaUrl = "https://deployinrailway-production.up.railway.app/Producto/ropa";
   url = nuevaUrl;
   HTMLResponse.innerHTML = "";
   traerProductos(); // cargar los productos desde la nueva URL
 }
 function cambiarUrl_b() {
-  const nuevaUrl ="http://localhost:8080/Producto/bienestar";
+  const nuevaUrl ="https://deployinrailway-production.up.railway.app/Producto/bienestar";
   url = nuevaUrl;
   HTMLResponse.innerHTML = "";
   traerProductos(); // cargar los productos desde la nueva URL

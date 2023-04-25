@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/Usuario/registrar';
+const API_URL = 'https://deployinrailway-production.up.railway.app/Usuario/registrar';
 let products = [];
 const createProduct = () => {
     const formData = new FormData(document.querySelector('#formAdd'));

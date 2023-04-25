@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/Producto/bienestar";
+const url = "https://deployinrailway-production.up.railway.app/Producto/bienestar";
 const HTMLResponse = document.getElementById("shopContent");
 
 fetch(url)

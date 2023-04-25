@@ -68,7 +68,7 @@ function traerCarrito (){
 //Variables y logica
 const userData = JSON.parse(localStorage.getItem("userData"));
 const id = userData.id;
-const url = "http://localhost:8080/Venta/Carro/"+id;
+const url = "https://deployinrailway-production.up.railway.app/Venta/Carro/"+id;
 const HTMLResponse = document.getElementById("listCar");
 
 mostrarCarro();
@@ -76,7 +76,7 @@ mostrarCarro();
 const cancelarProducto = (idUsuarioFK, nombre) => {
   const confirmacion = confirm(`¿Seguro que deseas CANCELAR el producto ${nombre} en el carrito?`);
   if (confirmacion) {
-    const url = 'http://localhost:8080/Venta/Carro/Cancelar';
+    const url = 'https://deployinrailway-production.up.railway.app/Venta/Carro/Cancelar';
 
     // Crea el objeto JSON
     const data = { "idusuariopropetario": idUsuarioFK, 
@@ -117,7 +117,7 @@ const cancelarProducto = (idUsuarioFK, nombre) => {
 const comprarProducto = (idUsuarioFK, nombre) => {
   const confirmacion = confirm(`¿Seguro que deseas COMPRAR el producto ${nombre}?`);
   if (confirmacion) {
-    const url = 'http://localhost:8080/Venta/Carro/Comprar';
+    const url = 'https://deployinrailway-production.up.railway.app/Venta/Carro/Comprar';
 
     // Crea el objeto JSON
     const data = { "idusuariopropetario": idUsuarioFK, 

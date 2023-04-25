@@ -3,7 +3,7 @@ function reedirigirPerfil () {
   
   let idUser = localStorage.getItem("usuarioId");
 
-  fetch('http://localhost:8080/Usuario/getRole/'+idUser, {
+  fetch('https://deployinrailway-production.up.railway.app/Usuario/getRole/'+idUser, {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ function reedirigirPerfil () {
 
 function iniciarSesion (e){
   e.preventDefault();
-  const login = "http://localhost:8080/Usuario/login";
+  const login = "https://deployinrailway-production.up.railway.app/Usuario/login";
 
   fetch(login, {
     method: "POST",

@@ -1,7 +1,7 @@
 //Funciones
 function agregarAlCarrito (values){
   // Definir los datos a enviar
-  const url = "http://localhost:8080/Venta/AgregarAlCarro";
+  const url = "https://deployinrailway-production.up.railway.app/Venta/AgregarAlCarro";
   const userData = JSON.parse(localStorage.getItem("userData"));
   const data = {
     idUsuarioPropetario: values[0],

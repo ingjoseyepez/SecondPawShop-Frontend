@@ -3,7 +3,7 @@ if (isLogin === 'false'){
   alert("¡Necesitas estar logeado para acceder a estos")
 }
 
-const API_URL = 'http://localhost:8080/Usuario/Actualizar';
+const API_URL = 'https://deployinrailway-production.up.railway.app/Usuario/Actualizar';
 const userData = JSON.parse(localStorage.getItem("userData"));
 
 
