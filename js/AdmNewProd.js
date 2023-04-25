@@ -7,7 +7,9 @@ if (isLogin === 'false'){
 const url = "https://deployinrailway-production.up.railway.app/Producto/Verificando";
 const HTMLResponse = document.getElementById("historial");
 
-fetch(url)
+fetch(url, {
+  method: "GET",
+})
 .then((response) => response.json())
 .then((productos) => {
   const table = tpl(productos);
