@@ -36,15 +36,31 @@ const createProduct = () => {
       'Content-Type': 'application/json'
     }
   })
-  .then(res => res.json())
+  .then(res => {
+    if (res.status === 409) {
+      alert("Usuario ya existente, vuelva a intentarlo");
+      document.querySelector('#formAdd').reset();
+      throw new Error('El usuario ya existe');
+       // Aquí lanzamos una excepción con un mensaje personalizado
+    } else {
+      alert("Usuario creado exitosamente.");
+      document.querySelector('#formAdd').reset();  
+      return res.json(); // En caso contrario, devolvemos los datos en formato JSON
+    }
+  })
   .catch(error => {
-    alertManager('error', error);
+    alertManager('error', error.message); // Mostramos el mensaje personalizado de la excepción
+    
   })
   .then(response => {
-    alertManager('success', response.mensaje)
+    alertManager('success', response.mensaje);
     getProducts();
+    
+  })
+  .catch(error => {
+    alertManager('error', error.message); // Si ocurre algún otro error, lo mostramos en la alerta
   });
-};
+}
 
 
   
