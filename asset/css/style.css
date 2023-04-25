@@ -68,9 +68,9 @@
   
   header .contenedor-texto {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 10px;
+   justify-content: center;
+   align-content: flex-start;
+   margin-bottom: 150px;
   }
   
   header .contenedor-texto .texto {
